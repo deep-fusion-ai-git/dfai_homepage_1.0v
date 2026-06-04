@@ -1,0 +1,25 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# 의존성
+node_modules/
+
+# 로그·임시
+*.log
+*.tmp
+.cache/
+
+# 내부 자료 (혹시 모를 안전장치)
+*.pdf
+00_source_pages/
+01_extracted_images/
+02_review_gallery/
+*manual_crops*.json
+*_auto_backup/
+FINAL_CURATION_LOG.md
+PHASE2_LOG.md
+REDESIGN_LOG.md

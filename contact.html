@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | DeepFusion AI</title>
+  <meta name="description" content="솔루션 문의, 기술 협력, 투자, 채용 — 24시간 내 회신.">
+  
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/contact.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo" aria-label="DeepFusion AI 홈">
+        DeepFusion<span>AI</span>
+      </a>
+      <button class="nav-toggle" aria-label="메뉴 열기/닫기" aria-expanded="false" aria-controls="main-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="technology.html" class="nav-link">Technology</a></li>
+          <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+          <li><a href="contact.html" class="nav-link nav-link--active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Section 1: Hero -->
+    <section class="hero section--dark" aria-label="문의하기">
+      <div class="hero-bg" style="background-image: url('assets/images/home/IR_p18_img_03.png'); opacity: 0.25;"></div>
+      <div class="hero-glow-orb hero-glow-orb--1" aria-hidden="true"></div>
+      <div class="radar-scanline" aria-hidden="true"></div>
+      <div class="container hero-container">
+        <div class="hero-card reveal-on-scroll">
+          <span class="eyebrow"><span class="pulse-dot" style="margin-left: 0; margin-right: 8px;" aria-hidden="true"></span>CONTACT</span>
+          <h1 class="hero-headline">Let's Build the<br>Future Together.</h1>
+          <p class="hero-subheadline">함께 만들어갑시다.</p>
+          <p class="hero-body">
+            DeepFusion AI는 기술 파트너십, 비즈니스 솔루션 도입, 인재 채용 및 투자 유치를 위해 언제든 열려 있습니다.
+          </p>
+          <div class="hero-ctas">
+            <a href="#form" class="btn btn-primary">문의 양식으로 가기 &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Inquiry Categories -->
+    <section class="inquiry-categories-section section-padding section--mid" aria-label="문의 카테고리">
+      <div class="container">
+        <span class="eyebrow reveal-on-scroll">Categories</span>
+        <h2 class="reveal-on-scroll stagger-1">문의 유형을 선택해 주세요</h2>
+        <div class="grid grid-4">
+          <!-- Cat 1 -->
+          <a href="#form" class="card category-card reveal-on-scroll stagger-1" data-type="solution">
+            <div class="cat-icon" aria-hidden="true">💼</div>
+            <h3>Solution Inquiry</h3>
+            <p>제품 검토 및 도입 상담</p>
+          </a>
+          <!-- Cat 2 -->
+          <a href="#form" class="card category-card reveal-on-scroll stagger-2" data-type="partnership">
+            <div class="cat-icon" aria-hidden="true">🤝</div>
+            <h3>Technology Partnership</h3>
+            <p>공동 R&D 및 기술 협력</p>
+          </a>
+          <!-- Cat 3 -->
+          <a href="#form" class="card category-card reveal-on-scroll stagger-3" data-type="ir">
+            <div class="cat-icon" aria-hidden="true">📈</div>
+            <h3>Investment</h3>
+            <p>IR 비즈니스 및 투자 문의</p>
+          </a>
+          <!-- Cat 4 -->
+          <a href="#form" class="card category-card reveal-on-scroll stagger-4" data-type="careers">
+            <div class="cat-icon" aria-hidden="true">🚀</div>
+            <h3>Careers</h3>
+            <p>인재 채용 및 입사 지원</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider-soft">
+
+    <!-- Section 3: Contact Form -->
+    <section class="contact-form-section section-padding section--dark" id="form" aria-label="문의하기 입력 폼">
+      <div class="container">
+        <div class="form-container-box reveal-on-scroll">
+          <span class="eyebrow">Form</span>
+          <h2>온라인 문의 접수</h2>
+          
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="inquiryType">문의 유형 *</label>
+                <select id="inquiryType" required>
+                  <option value="" disabled selected>유형을 선택해 주세요</option>
+                  <option value="solution">Solution Inquiry (제품 도입)</option>
+                  <option value="partnership">Technology Partnership (기술 협력)</option>
+                  <option value="ir">Investment (투자)</option>
+                  <option value="careers">Careers (인재 채용)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="senderName">이름 *</label>
+                <input type="text" id="senderName" placeholder="홍길동" required>
+              </div>
+
+              <div class="form-group">
+                <label for="company">소속 기관/회사 *</label>
+                <input type="text" id="company" placeholder="DeepFusion AI" required>
+              </div>
+
+              <div class="form-group">
+                <label for="jobTitle">직책 *</label>
+                <input type="text" id="jobTitle" placeholder="책임연구원" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">이메일 *</label>
+                <input type="email" id="email" placeholder="example@domain.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">전화번호</label>
+                <input type="tel" id="phone" placeholder="010-0000-0000">
+              </div>
+            </div>
+
+            <div class="form-group full-width" style="margin-top: var(--space-md);">
+              <label for="message">문의 내용 (최소 20자) *</label>
+              <textarea id="message" rows="6" placeholder="도입 희망 도메인 및 세부 요구사항을 최소 20자 이상 남겨주세요." required></textarea>
+            </div>
+
+            <div class="form-group full-width" style="margin-top: var(--space-md);">
+              <label for="attachment">첨부 파일 (최대 10MB)</label>
+              <input type="file" id="attachment" accept=".pdf,.doc,.docx,.png,.jpg,.zip">
+              <span class="file-info">지원 파일: PDF, Word, Image, Zip (최대 10MB)</span>
+            </div>
+
+            <div class="form-checkbox-group full-width">
+              <input type="checkbox" id="privacyConsent" required>
+              <label for="privacyConsent">개인정보 수집 및 이용에 동의합니다. *</label>
+            </div>
+
+            <div class="form-alert" id="formAlert" style="display: none;"></div>
+
+            <button type="submit" class="btn btn-primary form-submit-btn">
+              문의 보내기 <span aria-hidden="true">&rarr;</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider-soft">
+
+    <!-- Section 4: Direct Contact & Office Location -->
+    <section class="direct-office-section section-padding section--mid" aria-label="오프라인 연락처">
+      <div class="container">
+        <div class="grid grid-2">
+          <!-- Left: Direct Contact -->
+          <div class="direct-contact reveal-on-scroll">
+            <span class="eyebrow">Direct Contact</span>
+            <h2>직접 연락하기</h2>
+            <div class="direct-card card">
+              <h4>이메일 문의</h4>
+              <p>이메일: <a href="mailto:contact@deep-fusion.com">contact@deep-fusion.com</a></p>
+              <p class="caption">일반적으로 영업일 기준 24시간 내에 답변을 드립니다.</p>
+            </div>
+            <div class="direct-card card" style="margin-top: var(--space-md);">
+              <h4>운영 시간</h4>
+              <p>월요일 - 금요일 09:00 - 18:00 KST</p>
+              <p class="caption">주말 및 법정 공휴일 휴무</p>
+            </div>
+          </div>
+
+          <!-- Right: Office Locations -->
+          <div class="office-locations reveal-on-scroll stagger-1">
+            <span class="eyebrow">Locations</span>
+            <h2>오피스 위치</h2>
+            <div class="office-location-card card">
+              <h4>본사 (Headquarters)</h4>
+              <p>경상북도 경산시 대학로 280, 생산기술연구원 218호</p>
+              <p class="caption">역할: 핵심 R&D 및 기술 개발 실증 기지</p>
+              
+              <!-- Maps Placeholder iframe -->
+              <div class="map-wrapper" style="margin-top: var(--space-sm);">
+                <div class="map-placeholder">
+                  <span>Google Maps Embed Placeholder</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider-soft">
+
+    <!-- Section 6: Response Commitment -->
+    <section class="commitment-section section-padding section--dark" aria-label="고객 대응 약속">
+      <div class="container">
+        <span class="eyebrow reveal-on-scroll">Commitment</span>
+        <h2 class="reveal-on-scroll stagger-1">고객 파트너십 약속</h2>
+        <div class="grid grid-3">
+          <div class="card reveal-on-scroll stagger-1">
+            <h3>24시간 내 답변</h3>
+            <p>모든 서면 문의는 수신 후 24시간 이내에 첫 기술 엔지니어 검토 의견을 포함하여 회신합니다.</p>
+          </div>
+          <div class="card reveal-on-scroll stagger-2">
+            <h3>다이렉트 소통</h3>
+            <p>영업 담당자가 아닌, 실제 해당 도메인의 핵심 R&D 엔지니어가 직접 기술 세션을 조율합니다.</p>
+          </div>
+          <div class="card reveal-on-scroll stagger-3">
+            <h3>엄격한 비밀 보장</h3>
+            <p>방산 및 자율주행 특허 정보의 보호를 위해 제출해 주신 문서 정보는 NDA에 준하여 안전하게 폐쇄 서버에서만 취급합니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider-soft">
+
+    <!-- Section 7: FAQ -->
+    <section class="faq-section section-padding section--mid" aria-label="자주 묻는 질문">
+      <div class="container">
+        <span class="eyebrow reveal-on-scroll">FAQ</span>
+        <h2 class="reveal-on-scroll stagger-1">자주 묻는 질문</h2>
+        
+        <div class="faq-accordion reveal-on-scroll stagger-2">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-1">
+              <span>Q. 4D 이미징 레이다 알고리즘만 따로 라이선스 계약이 가능한가요?</span>
+              <span class="faq-chevron" aria-hidden="true">&darr;</span>
+            </button>
+            <div class="faq-answer" id="faq-ans-1" hidden>
+              <p>네, 가능합니다. RAPA-RLC 플랫폼은 라이브러리(SDK) 형태로 제공되어 파트너사의 자체 자율주행 하드웨어 시스템에 올려 연동할 수 있습니다.</p>
+            </div>
+          </div>
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-2">
+              <span>Q. 하드웨어(엣지 모듈) 제품의 내구성이 군사 규격에 준하나요?</span>
+              <span class="faq-chevron" aria-hidden="true">&darr;</span>
+            </button>
+            <div class="faq-answer" id="faq-ans-2" hidden>
+              <p>예. 당사 엣지 AI 컴팩트 모듈은 가혹한 진동, 영하 40도에서 영상 85도의 환경 노출 테스트 및 해수 방염 처리가 설계 단계에서 완료되어 MIL-STD 규격 통과를 준비 중에 있습니다.</p>
+            </div>
+          </div>
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-3">
+              <span>Q. 솔루션 도입 문의 시 실증 데모 주행을 먼저 해볼 수 있을까요?</span>
+              <span class="faq-chevron" aria-hidden="true">&darr;</span>
+            </button>
+            <div class="faq-answer" id="faq-ans-3" hidden>
+              <p>물론입니다. 경산 본사 또는 서울 R&D 센터를 통하여 시승 및 자율 수상함 데모 주행 약정을 진행하실 수 있습니다. 도입 유형에 따라 맞춤형 테스트 주행 일정을 제공합니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: Follow Us -->
+    <section class="follow-section section-padding section--dark" aria-label="링크드인 팔로우">
+      <div class="container text-center reveal-on-scroll">
+        <span class="eyebrow">Connect</span>
+        <h2>DeepFusion AI 소식 팔로우</h2>
+        <p style="margin-bottom: var(--space-lg); color: var(--text-secondary);">LinkedIn을 통해 CES 참가 소식 및 최신 실증 영상을 가장 빠르게 접하실 수 있습니다.</p>
+        <a href="https://www.linkedin.com/company/deepfusion-ai/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          LinkedIn 방문하기 &rarr;
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>DeepFusion AI</h4>
+          <p style="font-size: var(--fs-xs); color: var(--text-muted); margin-bottom: var(--space-xs);">
+            Radar-Centric Sensor Fusion AI
+          </p>
+          <p style="font-size: var(--fs-sm); color: var(--text-secondary);">
+            자율·무인 시대의 인지를 다시 정의합니다.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul>
+            <li><a href="solutions.html#usv" class="footer-link">USV (무인수상정)</a></li>
+            <li><a href="solutions.html#ugv" class="footer-link">UGV (무인지상차량)</a></li>
+            <li><a href="solutions.html#wave" class="footer-link">Wave Detection (파고탐지)</a></li>
+            <li><a href="solutions.html#autonomous" class="footer-link">Autonomous Driving (자율주행)</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="technology.html" class="footer-link">Technology</a></li>
+            <li><a href="solutions.html" class="footer-link">Solutions</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul style="gap: var(--space-sm); font-size: var(--fs-xs); color: var(--text-secondary);">
+            <li>
+              <strong>본사 (Headquarters)</strong><br>
+              경상북도 경산시 대학로 280, 생산기술연구원 218호
+            </li>
+            <li>
+              <strong>서울 연구소 (Seoul R&D Center)</strong><br>
+              서울특별시 강남구 광평로51길 6-27, 성우빌딩 201호
+            </li>
+            <li style="margin-top: var(--space-xs);">
+              이메일: <a href="mailto:contact@deep-fusion.com" class="footer-link">contact@deep-fusion.com</a>
+            </li>
+            <li>
+              웹사이트: <a href="https://www.deep-fusion.com" class="footer-link">deep-fusion.com</a>
+            </li>
+            <li>
+              LinkedIn: <a href="https://www.linkedin.com/company/deepfusion-ai/" class="footer-link">linkedin.com/company/deepfusion-ai</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-copy">
+          &copy; 2026 DeepFusion AI. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/animations.js" defer></script>
+  <script src="assets/js/contact.js" defer></script>
+</body>
+</html>

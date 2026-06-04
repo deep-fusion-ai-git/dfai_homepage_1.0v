@@ -1,0 +1,127 @@
+/* === Solutions Page CSS === */
+
+/* Solution navigation cards */
+.solution-card-nav {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.solution-card-nav h3 {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  color: var(--accent-cyan);
+  margin-bottom: var(--space-xs);
+}
+
+.solution-card-nav p {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+}
+
+/* Solution Details Section styling */
+.solution-detail {
+  scroll-margin-top: 100px;
+}
+
+.sol-header {
+  margin-bottom: var(--space-lg);
+  text-align: center;
+}
+
+.sol-main-img {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto var(--space-xl);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--bg-card-border);
+  box-shadow: var(--shadow-card);
+}
+
+.sol-main-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform var(--transition-slow);
+}
+
+.sol-main-img:hover img {
+  transform: scale(1.01);
+}
+
+.sol-features {
+  margin-bottom: var(--space-2xl);
+}
+
+/* Sub-gallery grid */
+.sol-gallery {
+  margin-top: var(--space-xl);
+}
+
+.sol-gallery h3 {
+  font-size: var(--fs-lg);
+  margin-bottom: var(--space-md);
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.gallery-4-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-sm);
+}
+
+.gallery-4-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--bg-card-border);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-slow), filter var(--transition-slow);
+  filter: brightness(0.92);
+}
+
+.gallery-4-grid img:hover {
+  transform: translateY(-2px);
+  filter: brightness(1);
+}
+
+/* Center Message block styling */
+.integration-message-section {
+  text-align: center;
+}
+
+.message-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.message-content h2 {
+  font-size: var(--fs-2xl);
+  margin-bottom: var(--space-md);
+}
+
+.message-content .lead-p {
+  font-size: var(--fs-base);
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .gallery-4-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-4-grid {
+    grid-template-columns: 1fr;
+  }
+}
