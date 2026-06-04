@@ -93,7 +93,7 @@
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;   /* ★ 가로 중앙 */
-  padding: 6rem 1.5rem 4rem;
+  padding: calc(var(--header-height) + 4rem) 1.5rem 4rem;
   overflow: hidden;
   background:
     linear-gradient(
@@ -641,6 +641,13 @@ section.hero {
   align-items: center !important;
   justify-content: center !important;
   text-align: left !important;
+  padding-top: calc(var(--header-height) + 4rem) !important;
+}
+
+@media (max-width: 768px) {
+  section.hero {
+    padding-top: calc(var(--header-height-mobile) + 3rem) !important;
+  }
 }
 
 section.hero > *,

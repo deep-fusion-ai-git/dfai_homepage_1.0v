@@ -90,4 +90,8 @@
   --z-dropdown: 10;
   --z-sticky: 100;
   --z-modal: 1000;
+
+  /* Header (Sticky) */
+  --header-height: 80px;
+  --header-height-mobile: 64px;
 }

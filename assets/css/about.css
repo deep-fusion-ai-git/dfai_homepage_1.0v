@@ -155,3 +155,39 @@
     gap: var(--space-lg);
   }
 }
+
+/* Page Hero Styling */
+.hero {
+  padding-top: calc(var(--header-height) + 5rem) !important;
+  padding-bottom: 5rem !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+  min-height: 60vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: left !important;
+}
+
+.hero .container,
+.hero-inner {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+}
+
+.hero h1,
+.hero .hero-headline {
+  margin-top: 0 !important;
+  line-height: 1.15 !important;
+  word-break: keep-all !important;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: calc(var(--header-height-mobile) + 3rem) !important;
+    padding-bottom: 3rem !important;
+    min-height: 50vh !important;
+  }
+}
