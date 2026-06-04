@@ -96,8 +96,14 @@
   padding: 6rem 1.5rem 4rem;
   overflow: hidden;
   background:
-    linear-gradient(180deg, rgba(10,31,68,0.55) 0%, rgba(14,38,84,0.70) 100%),
-    url("../images/solutions/04_autonomous/IR_p37_img_04.png") center/cover no-repeat;
+    linear-gradient(
+      135deg,
+      rgba(10, 31, 68, 0.55) 0%,
+      rgba(14, 38, 84, 0.35) 50%,
+      rgba(10, 31, 68, 0.45) 100%
+    ),
+    url("../images/home/hero/hero_main.png") center/cover no-repeat;
+  background-attachment: scroll;  /* 모바일 호환 */
   text-align: left;
 }
 
