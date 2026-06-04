@@ -96,8 +96,8 @@
   padding: 6rem 1.5rem 4rem;
   overflow: hidden;
   background:
-    linear-gradient(180deg, rgba(10,31,68,0.45) 0%, rgba(14,38,84,0.60) 100%),
-    url("../images/home/IR_p18_img_03.png") center/cover no-repeat;
+    linear-gradient(180deg, rgba(10,31,68,0.55) 0%, rgba(14,38,84,0.70) 100%),
+    url("../images/solutions/04_autonomous/IR_p37_img_04.png") center/cover no-repeat;
   text-align: left;
 }
 
@@ -626,4 +626,56 @@
     padding: 2rem 1.5rem;
     background: rgba(10, 31, 68, 0.30);  /* 모바일은 약간 진하게 가독성 확보 */
   }
+}
+
+/* ===== Hero 중앙 정렬 강제 (최종 오버라이드) ===== */
+section.hero {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: left !important;
+}
+
+section.hero > *,
+section.hero .container,
+section.hero .hero-inner,
+section.hero .hero-wrapper,
+section.hero .hero-content {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;    /* ★ 자식 가운데 정렬 */
+  justify-content: center !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  position: relative;
+  z-index: 2;
+}
+
+section.hero .hero-panel,
+section.hero .hero-card,
+section.hero .hero-glass,
+section.hero .glass-panel {
+  width: 100% !important;
+  max-width: 720px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;     /* ★ 카드도 가운데 */
+  float: none !important;            /* float 해제 */
+  position: relative !important;     /* absolute 해제 */
+  left: auto !important;
+  right: auto !important;
+  transform: none !important;        /* translate 해제 */
+
+  /* 투명도·블러 (이전 단계 유지) */
+  background: rgba(10, 31, 68, 0.22) !important;
+  border: 1px solid rgba(6, 182, 212, 0.22);
+  backdrop-filter: blur(12px) saturate(130%);
+  -webkit-backdrop-filter: blur(12px) saturate(130%);
+  padding: 3rem 3.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
 }
