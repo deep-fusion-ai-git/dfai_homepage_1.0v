@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | DeepFusion AI</title>
+  <title data-i18n="contact.meta.title">Contact | DeepFusion AI</title>
   <meta name="description" content="Inquiries regarding solutions, technical partnerships, investment, or recruiting — 24h reply.">
   
   <link rel="stylesheet" href="../assets/css/variables.css">
@@ -56,8 +56,8 @@
         <div class="hero-card reveal-on-scroll">
           <span class="eyebrow"><span class="pulse-dot" style="margin-left: 0; margin-right: 8px;" aria-hidden="true"></span>CONTACT</span>
           <h1 class="hero-headline">Let's Build the<br>Future Together.</h1>
-          <p class="hero-subheadline">Let's Build the Future Together.</p>
-          <p class="hero-body">
+          <p data-i18n="contact.hero.p_text" class="hero-subheadline">Let's Build the Future Together.</p>
+          <p data-i18n="contact.hero.p_text_2" class="hero-body">
             DeepFusion AI is always open for technology partnerships, business solution implementation, recruiting, and investment inquiries.
           </p>
           <div class="hero-ctas">
@@ -70,32 +70,32 @@
     <!-- Section 2: Inquiry Categories -->
     <section class="inquiry-categories-section section-padding section--mid" aria-label="Inquiry Category">
       <div class="container">
-        <span class="eyebrow reveal-on-scroll">Categories</span>
-        <h2 class="reveal-on-scroll stagger-1">Please select inquiry type</h2>
+        <span data-i18n="contact.inquiry-categories.span_text" class="eyebrow reveal-on-scroll">Categories</span>
+        <h2 data-i18n="contact.inquiry-categories.h2_title" class="reveal-on-scroll stagger-1">Please select inquiry type</h2>
         <div class="grid grid-4">
           <!-- Cat 1 -->
           <a href="#form" class="card category-card reveal-on-scroll stagger-1" data-type="solution">
             <div class="cat-icon" aria-hidden="true">💼</div>
-            <h3>Solution Inquiry</h3>
-            <p>Product Review & Implementation Consulting</p>
+            <h3 data-i18n="contact.inquiry-categories.h3_title">Solution Inquiry</h3>
+            <p data-i18n="contact.inquiry-categories.p_text">Product Review & Implementation Consulting</p>
           </a>
           <!-- Cat 2 -->
           <a href="#form" class="card category-card reveal-on-scroll stagger-2" data-type="partnership">
             <div class="cat-icon" aria-hidden="true">🤝</div>
-            <h3>Technology Partnership</h3>
+            <h3 data-i18n="contact.inquiry-categories.h3_title_2">Technology Partnership</h3>
             <p>Joint R&D & Tech Collaboration</p>
           </a>
           <!-- Cat 3 -->
           <a href="#form" class="card category-card reveal-on-scroll stagger-3" data-type="ir">
             <div class="cat-icon" aria-hidden="true">📈</div>
-            <h3>Investment</h3>
-            <p>IR Business & Investment Inquiries</p>
+            <h3 data-i18n="contact.inquiry-categories.h3_title_3">Investment</h3>
+            <p data-i18n="contact.inquiry-categories.p_text_3">IR Business & Investment Inquiries</p>
           </a>
           <!-- Cat 4 -->
           <a href="#form" class="card category-card reveal-on-scroll stagger-4" data-type="careers">
             <div class="cat-icon" aria-hidden="true">🚀</div>
-            <h3>Careers</h3>
-            <p>Recruitment & Job Application</p>
+            <h3 data-i18n="contact.inquiry-categories.h3_title_4">Careers</h3>
+            <p data-i18n="contact.inquiry-categories.p_text_4">Recruitment & Job Application</p>
           </a>
         </div>
       </div>
@@ -107,13 +107,13 @@
     <section class="contact-form-section section-padding section--dark" id="form" aria-label="Inquiry Form">
       <div class="container">
         <div class="form-container-box reveal-on-scroll">
-          <span class="eyebrow">Form</span>
-          <h2>Submit Online Inquiry</h2>
+          <span data-i18n="contact.form.span_text" class="eyebrow">Form</span>
+          <h2 data-i18n="contact.form.h2_title">Submit Online Inquiry</h2>
           
           <form class="contact-form" id="contactForm" novalidate>
             <div class="form-grid">
               <div class="form-group">
-                <label for="inquiryType">Inquiry Type *</label>
+                <label data-i18n="contact.form.label_label" for="inquiryType">Inquiry Type *</label>
                 <select id="inquiryType" required>
                   <option value="" disabled selected>Please select a type</option>
                   <option value="solution">Solution Inquiry (Implementation)</option>
@@ -124,45 +124,45 @@
               </div>
 
               <div class="form-group">
-                <label for="senderName">Name *</label>
+                <label data-i18n="contact.form.label_label_2" for="senderName">Name *</label>
                 <input type="text" id="senderName" placeholder="John Doe" required>
               </div>
 
               <div class="form-group">
-                <label for="company">Organization/Company *</label>
+                <label data-i18n="contact.form.label_/" for="company">Organization/Company *</label>
                 <input type="text" id="company" placeholder="DeepFusion AI" required>
               </div>
 
               <div class="form-group">
-                <label for="jobTitle">Job Title *</label>
+                <label data-i18n="contact.form.label_label_3" for="jobTitle">Job Title *</label>
                 <input type="text" id="jobTitle" placeholder="Principal Researcher" required>
               </div>
 
               <div class="form-group">
-                <label for="email">Email *</label>
+                <label data-i18n="contact.form.label_label_4" for="email">Email *</label>
                 <input type="email" id="email" placeholder="example@domain.com" required>
               </div>
 
               <div class="form-group">
-                <label for="phone">Phone</label>
+                <label data-i18n="contact.form.label_label_5" for="phone">Phone</label>
                 <input type="tel" id="phone" placeholder="010-0000-0000">
               </div>
             </div>
 
             <div class="form-group full-width" style="margin-top: var(--space-md);">
-              <label for="message">Inquiry Details (at least 20 characters) *</label>
+              <label data-i18n="contact.form.label_(_20)" for="message">Inquiry Details (at least 20 characters) *</label>
               <textarea id="message" rows="6" placeholder="Please leave your preferred domain and detailed requirements (at least 20 characters)." required></textarea>
             </div>
 
             <div class="form-group full-width" style="margin-top: var(--space-md);">
-              <label for="attachment">Attachment (Max 10MB)</label>
+              <label data-i18n="contact.form.label_(_10mb)" for="attachment">Attachment (Max 10MB)</label>
               <input type="file" id="attachment" accept=".pdf,.doc,.docx,.png,.jpg,.zip">
-              <span class="file-info">Supported files: PDF, Word, Image, Zip (Max 10MB)</span>
+              <span data-i18n="contact.form.span_text_2" class="file-info">Supported files: PDF, Word, Image, Zip (Max 10MB)</span>
             </div>
 
             <div class="form-checkbox-group full-width">
               <input type="checkbox" id="privacyConsent" required>
-              <label for="privacyConsent">I agree to the collection and use of personal information. *</label>
+              <label data-i18n="contact.form.label_." for="privacyConsent">I agree to the collection and use of personal information. *</label>
             </div>
 
             <div class="form-alert" id="formAlert" style="display: none;"></div>
@@ -183,33 +183,33 @@
         <div class="grid grid-2">
           <!-- Left: Direct Contact -->
           <div class="direct-contact reveal-on-scroll">
-            <span class="eyebrow">Direct Contact</span>
-            <h2>Contact Directly</h2>
+            <span data-i18n="contact.direct-office.span_text" class="eyebrow">Direct Contact</span>
+            <h2 data-i18n="contact.direct-office.h2_title">Contact Directly</h2>
             <div class="direct-card card">
-              <h4>Email Inquiry</h4>
-              <p>Email: <a href="mailto:contact@deep-fusion.com">contact@deep-fusion.com</a></p>
-              <p class="caption">Typically, we respond within 24 hours on business days.</p>
+              <h4 data-i18n="contact.direct-office.h4_title">Email Inquiry</h4>
+              <p>Email: <a data-i18n="contact.direct-office.a_text" href="mailto:contact@deep-fusion.com">contact@deep-fusion.com</a></p>
+              <p data-i18n="contact.direct-office.p_text" class="caption">Typically, we respond within 24 hours on business days.</p>
             </div>
             <div class="direct-card card" style="margin-top: var(--space-md);">
-              <h4>Operating Hours</h4>
-              <p>Monday - Friday 09:00 - 18:00 KST</p>
-              <p class="caption">Closed on weekends and public holidays</p>
+              <h4 data-i18n="contact.direct-office.h4_title_2">Operating Hours</h4>
+              <p data-i18n="contact.direct-office.p_text_2">Monday - Friday 09:00 - 18:00 KST</p>
+              <p data-i18n="contact.direct-office.p_text_3" class="caption">Closed on weekends and public holidays</p>
             </div>
           </div>
 
           <!-- Right: Office Locations -->
           <div class="office-locations reveal-on-scroll stagger-1">
-            <span class="eyebrow">Locations</span>
-            <h2>Office Locations</h2>
+            <span data-i18n="contact.direct-office.span_text_2" class="eyebrow">Locations</span>
+            <h2 data-i18n="contact.direct-office.h2_title_2">Office Locations</h2>
             <div class="office-location-card card">
-              <h4>Headquarters</h4>
-              <p>Rm 218, KITECH, 280 Daehak-ro, Gyeongsan-si, Gyeongsangbuk-do, Republic of Korea</p>
+              <h4 data-i18n="contact.direct-office.h4_title_3">Headquarters</h4>
+              <p data-i18n="contact.direct-office.p_text_4">Rm 218, KITECH, 280 Daehak-ro, Gyeongsan-si, Gyeongsangbuk-do, Republic of Korea</p>
               <p class="caption">Role: Core R&D and Technology Development Trial Site</p>
               
               <!-- Maps Placeholder iframe -->
               <div class="map-wrapper" style="margin-top: var(--space-sm);">
                 <div class="map-placeholder">
-                  <span>Google Maps Embed Placeholder</span>
+                  <span data-i18n="contact.direct-office.span_text_3">Google Maps Embed Placeholder</span>
                 </div>
               </div>
             </div>
@@ -223,20 +223,20 @@
     <!-- Section 6: Response Commitment -->
     <section class="commitment-section section-padding section--dark" aria-label="Customer Response Promise">
       <div class="container">
-        <span class="eyebrow reveal-on-scroll">Commitment</span>
-        <h2 class="reveal-on-scroll stagger-1">Customer Partnership Promise</h2>
+        <span data-i18n="contact.commitment.span_text" class="eyebrow reveal-on-scroll">Commitment</span>
+        <h2 data-i18n="contact.commitment.h2_title" class="reveal-on-scroll stagger-1">Customer Partnership Promise</h2>
         <div class="grid grid-3">
           <div class="card reveal-on-scroll stagger-1">
-            <h3>24-Hour Reply</h3>
-            <p>All written inquiries are reviewed by a technical engineer and replied to within 24 hours of receipt.</p>
+            <h3 data-i18n="contact.commitment.h3_title">24-Hour Reply</h3>
+            <p data-i18n="contact.commitment.p_text">All written inquiries are reviewed by a technical engineer and replied to within 24 hours of receipt.</p>
           </div>
           <div class="card reveal-on-scroll stagger-2">
-            <h3>Direct Communication</h3>
+            <h3 data-i18n="contact.commitment.h3_title_2">Direct Communication</h3>
             <p>R&D engineers, not sales reps, directly coordinate and lead technical sessions for your domain.</p>
           </div>
           <div class="card reveal-on-scroll stagger-3">
-            <h3>Strict Confidentiality</h3>
-            <p>To protect defense and autonomous driving patents, all submitted documents are treated strictly under NDA on secure servers.</p>
+            <h3 data-i18n="contact.commitment.h3_title_3">Strict Confidentiality</h3>
+            <p data-i18n="contact.commitment.p_text_3">To protect defense and autonomous driving patents, all submitted documents are treated strictly under NDA on secure servers.</p>
           </div>
         </div>
       </div>
@@ -247,34 +247,34 @@
     <!-- Section 7: FAQ -->
     <section class="faq-section section-padding section--mid" aria-label="Frequently Asked Questions">
       <div class="container">
-        <span class="eyebrow reveal-on-scroll">FAQ</span>
-        <h2 class="reveal-on-scroll stagger-1">Frequently Asked Questions</h2>
+        <span data-i18n="contact.faq.span_text" class="eyebrow reveal-on-scroll">FAQ</span>
+        <h2 data-i18n="contact.faq.h2_title" class="reveal-on-scroll stagger-1">Frequently Asked Questions</h2>
         
         <div class="faq-accordion reveal-on-scroll stagger-2">
           <!-- FAQ 1 -->
           <div class="faq-item">
             <button class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-1">
-              <span>Q. Can we license the 4D imaging radar algorithm separately?</span>
+              <span data-i18n="contact.faq.span_text_2">Q. Can we license the 4D imaging radar algorithm separately?</span>
               <span class="faq-chevron" aria-hidden="true">&darr;</span>
             </button>
             <div class="faq-answer" id="faq-ans-1" hidden>
-              <p>Yes, it is possible. The RAPA-RLC platform is provided as a software library (SDK) that can be integrated directly onto your existing hardware and autonomous platforms.</p>
+              <p data-i18n="contact.faq.p_text">Yes, it is possible. The RAPA-RLC platform is provided as a software library (SDK) that can be integrated directly onto your existing hardware and autonomous platforms.</p>
             </div>
           </div>
           <!-- FAQ 2 -->
           <div class="faq-item">
             <button class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-2">
-              <span>Q. Does the ruggedness of the hardware (Edge module) comply with military specs?</span>
+              <span data-i18n="contact.faq.span_text_4">Q. Does the ruggedness of the hardware (Edge module) comply with military specs?</span>
               <span class="faq-chevron" aria-hidden="true">&darr;</span>
             </button>
             <div class="faq-answer" id="faq-ans-2" hidden>
-              <p>Yes, our Edge AI Compact Module is designed and tested for harsh vibrations, temperature ranges from -40°C to 85°C, and marine corrosion resistance, actively preparing for MIL-STD certification.</p>
+              <p data-i18n="contact.faq.p_text_2">Yes, our Edge AI Compact Module is designed and tested for harsh vibrations, temperature ranges from -40°C to 85°C, and marine corrosion resistance, actively preparing for MIL-STD certification.</p>
             </div>
           </div>
           <!-- FAQ 3 -->
           <div class="faq-item">
             <button class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-3">
-              <span>Q. Can we request a physical demo run before committing to solution implementation?</span>
+              <span data-i18n="contact.faq.span_text_6">Q. Can we request a physical demo run before committing to solution implementation?</span>
               <span class="faq-chevron" aria-hidden="true">&darr;</span>
             </button>
             <div class="faq-answer" id="faq-ans-3" hidden>
@@ -288,9 +288,9 @@
     <!-- Section 8: Follow Us -->
     <section class="follow-section section-padding section--dark" aria-label="Follow on LinkedIn">
       <div class="container text-center reveal-on-scroll">
-        <span class="eyebrow">Connect</span>
-        <h2>Follow DeepFusion AI News</h2>
-        <p style="margin-bottom: var(--space-lg); color: var(--text-secondary);">Follow us on LinkedIn to receive the latest updates on CES exhibition news and field test videos.</p>
+        <span data-i18n="contact.follow.span_text" class="eyebrow">Connect</span>
+        <h2 data-i18n="contact.follow.h2_title">Follow DeepFusion AI News</h2>
+        <p data-i18n="contact.follow.p_text" style="margin-bottom: var(--space-lg); color: var(--text-secondary);">Follow us on LinkedIn to receive the latest updates on CES exhibition news and field test videos.</p>
         <a href="https://www.linkedin.com/company/deepfusion-ai/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
           Visit LinkedIn &rarr;
         </a>
@@ -304,15 +304,15 @@
       <div class="footer-grid">
         <div class="footer-col">
           <h4>DeepFusion AI</h4>
-          <p style="font-size: var(--fs-xs); color: var(--text-muted); margin-bottom: var(--space-xs);">
+          <p data-i18n="common.footer.p_text" style="font-size: var(--fs-xs); color: var(--text-muted); margin-bottom: var(--space-xs);">
             Radar-Centric Sensor Fusion AI
           </p>
-          <p style="font-size: var(--fs-sm); color: var(--text-secondary);">
+          <p data-i18n="common.footer.p_text_2" style="font-size: var(--fs-sm); color: var(--text-secondary);">
             Redefining perception for the autonomous era.
           </p>
         </div>
         <div class="footer-col">
-          <h4>Solutions</h4>
+          <h4 data-i18n="common.footer.h4_title">Solutions</h4>
           <ul>
             <li><a href="solutions.html#usv" class="footer-link">USV (Unmanned Surface Vehicle)</a></li>
             <li><a href="solutions.html#ugv" class="footer-link">UGV (Unmanned Ground Vehicle)</a></li>
@@ -321,7 +321,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Company</h4>
+          <h4 data-i18n="common.footer.h4_title_2">Company</h4>
           <ul>
             <li><a href="about.html" class="footer-link">About</a></li>
             <li><a href="technology.html" class="footer-link">Technology</a></li>
@@ -330,7 +330,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Connect</h4>
+          <h4 data-i18n="common.footer.h4_title_3">Connect</h4>
           <ul style="gap: var(--space-sm); font-size: var(--fs-xs); color: var(--text-secondary);">
             <li>
               <strong>Headquarters</strong><br>
