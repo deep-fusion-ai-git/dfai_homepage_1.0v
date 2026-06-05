@@ -88,22 +88,15 @@
 /* === Hero 전체 컨테이너 === */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 75vh;
+  min-height: clamp(620px, 75vh, 850px);
   width: 100%;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;   /* ★ 가로 중앙 */
   padding: calc(var(--header-height) + 4rem) 1.5rem 4rem;
   overflow: hidden;
-  background:
-    linear-gradient(
-      135deg,
-      rgba(10, 31, 68, 0.55) 0%,
-      rgba(14, 38, 84, 0.35) 50%,
-      rgba(10, 31, 68, 0.45) 100%
-    ),
-    url("../images/home/hero/hero_main.jpg") center/cover no-repeat;
-  background-attachment: scroll;  /* 모바일 호환 */
+  background: #001c32; /* Left edge average color for perfect blending */
   text-align: left;
 }
 
@@ -114,8 +107,8 @@
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-position: center;
-  opacity: 0.55; /* 자연스럽게 비쳐 보이게 투명도 조정 */
+  background-position: center 35%; /* Adjust vertical centering to show the cars and waves better */
+  opacity: 0.65; /* Adjust opacity for premium feel and contrast */
   z-index: 1;
   pointer-events: none;
 }
