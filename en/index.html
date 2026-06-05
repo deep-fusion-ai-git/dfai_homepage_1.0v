@@ -1,31 +1,22 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
-  <script>
-    (function() {
-      if (window.location.pathname.indexOf('/en/') === 0) return;
-      if (localStorage.getItem('dfai_lang_pref') === 'ko') return;
-      var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-      if (lang.indexOf('ko') === -1 && lang.indexOf('en') === 0) {
-        window.location.replace('en/' + window.location.pathname.split('/').pop());
-      }
-    })();
-  </script>
+  
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DeepFusion AI | Radar-Centric Sensor Fusion AI for Autonomous Systems</title>
+  <title>DeepFusion AI — See Beyond Vision | 4D Imaging Radar Deep Learning</title>
   
   <!-- SEO Meta Tags -->
-  <meta name="description" content="DFAI는 4D 이미징 레이다 딥러닝으로 자율·무인 시대의 인지 기술을 선도합니다. CES 2026 Innovation Award 수상, 방산·해양·자동차 분야 적용.">
-  <meta name="keywords" content="4D imaging radar, sensor fusion, autonomous driving AI, USV perception, radar deep learning, DeepFusion AI, 4D 이미징 레이다, 자율주행 AI, 경산 AI 기업, 강남 자율주행 AI, 수서 딥러닝 스타트업">
+  <meta name="description" content="DeepFusion AI (DFAI) redefines perception for the autonomous era with 4D imaging radar deep learning and proprietary sensor fusion. Winner of the CES 2026 Innovation Award, applied across defense, maritime, and automotive sectors.">
+  <meta name="keywords" content="4D imaging radar, sensor fusion, autonomous driving AI, USV perception, radar deep learning, DeepFusion AI, 4D Imaging Radar, Sensor Fusion, Autonomous Driving, USV, UGV, Edge AI, DFAI">
   <meta name="geo.region" content="KR-47, KR-11">
-  <meta name="geo.placename" content="경산, 서울 강남">
+  <meta name="geo.placename" content="Gyeongsan, Gangnam Seoul">
   <link rel="canonical" href="https://www.deep-fusion.com/">
   
   <!-- Open Graph -->
   <meta property="og:title" content="DeepFusion AI | Radar-Centric Sensor Fusion AI">
-  <meta property="og:description" content="4D 이미징 레이다 딥러닝과 센서 퓨전 기술로 자율·무인 시대의 인지를 다시 정의합니다.">
+  <meta property="og:description" content="4D Imaging Radar Deep Learning and proprietary sensor fusion technology for the autonomous era.">
   <meta property="og:image" content="assets/images/home/hero/hero_main.jpg">
   <meta property="og:url" content="https://www.deep-fusion.com/">
   <meta property="og:type" content="website">
@@ -33,7 +24,7 @@
   <!-- LinkedIn / Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="DeepFusion AI | Radar-Centric Sensor Fusion AI">
-  <meta name="twitter:description" content="4D 이미징 레이다 딥러닝과 센서 퓨전 기술로 자율·무인 시대의 인지를 다시 정의합니다.">
+  <meta name="twitter:description" content="4D Imaging Radar Deep Learning and proprietary sensor fusion technology for the autonomous era.">
   <meta name="twitter:image" content="assets/images/home/hero/hero_main.jpg">
   
   <!-- Fonts -->
@@ -42,19 +33,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/variables.css">
-  <link rel="stylesheet" href="assets/css/reset.css">
-  <link rel="stylesheet" href="assets/css/base.css">
-  <link rel="stylesheet" href="assets/css/components.css">
-  <link rel="stylesheet" href="assets/css/animations.css">
-  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="../assets/css/variables.css">
+  <link rel="stylesheet" href="../assets/css/reset.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/home.css">
   
   <!-- Scripts -->
-  <script src="assets/js/main.js" defer></script>
-  <script src="assets/js/animations.js" defer></script>
-  <script src="assets/js/home.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/animations.js" defer></script>
+  <script src="../assets/js/home.js" defer></script>
   <!-- Multilingual SEO -->
-  <link rel="alternate" hreflang="ko" href="https://www.deep-fusion.com/index.html">
+  <link rel="alternate" hreflang="en" href="https://www.deep-fusion.com/index.html">
   <link rel="alternate" hreflang="en" href="https://www.deep-fusion.com/en/index.html">
   <link rel="alternate" hreflang="x-default" href="https://www.deep-fusion.com/index.html">
 </head>
@@ -62,10 +53,10 @@
   <!-- Header -->
   <header class="site-header" id="site-header">
     <div class="container header-container">
-      <a href="index.html" class="logo" aria-label="DeepFusion AI 홈">
+      <a href="index.html" class="logo" aria-label="DeepFusion AI Home">
         DeepFusion<span>AI</span>
       </a>
-      <button class="nav-toggle" aria-label="메뉴 열기/닫기" aria-expanded="false" aria-controls="main-nav">
+      <button class="nav-toggle" aria-label="Open/Close Menu" aria-expanded="false" aria-controls="main-nav">
         <span></span>
         <span></span>
         <span></span>
@@ -79,9 +70,9 @@
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
         <div class="lang-switcher" role="group" aria-label="Language">
-          <a href="index.html" class="lang-link active" aria-current="true">KO</a>
+          <a href="../index.html" class="lang-link" hreflang="en">KO</a>
           <span class="lang-divider">|</span>
-          <a href="en/index.html" class="lang-link" hreflang="en">EN</a>
+          <a href="index.html" class="lang-link active" aria-current="true">EN</a>
         </div>
       </nav>
     </div>
@@ -89,8 +80,8 @@
 
   <main>
     <!-- Section 1: Hero -->
-    <section class="hero section--dark" aria-label="소개">
-      <div class="hero-bg" style="background-image: url('assets/images/home/hero/hero_main.jpg');"></div>
+    <section class="hero section--dark" aria-label="Introduction">
+      <div class="hero-bg" style="background-image: url('../assets/images/home/hero/hero_main.jpg');"></div>
       <div class="hero-glow-orb hero-glow-orb--1" aria-hidden="true"></div>
       <div class="hero-glow-orb hero-glow-orb--2" aria-hidden="true"></div>
       <div class="radar-scanline" aria-hidden="true"></div>
@@ -98,13 +89,13 @@
         <div class="hero-card reveal-on-scroll">
           <span class="eyebrow"><span class="pulse-dot" style="margin-left: 0; margin-right: 8px;" aria-hidden="true"></span>Radar-Centric Sensor Fusion AI</span>
           <h1 class="hero-headline">See Beyond Vision.</h1>
-          <p class="hero-subheadline">시야 너머를 봅니다.</p>
+          <p class="hero-subheadline">See Beyond Vision.</p>
           <p class="hero-body">
-            4D 이미징 레이다 딥러닝으로 자율·무인 시대의 인지를 다시 정의합니다.
+            Redefining perception for the autonomous era with 4D imaging radar deep learning.
           </p>
           <div class="hero-ctas">
-            <a href="technology.html" class="btn btn-primary" aria-label="기술 살펴보기">기술 살펴보기 &rarr;</a>
-            <a href="contact.html#form" class="btn btn-secondary" aria-label="솔루션 문의하기">솔루션 문의</a>
+            <a href="technology.html" class="btn btn-primary" aria-label="Explore Technology">Explore Technology &rarr;</a>
+            <a href="contact.html#form" class="btn btn-secondary" aria-label="Inquire Solutions">Inquire Solutions</a>
           </div>
           <div class="hero-badge">
             CES 2026 Innovation Award
@@ -116,10 +107,10 @@
     <hr class="section-divider-soft">
 
     <!-- Section 2: Impact Numbers -->
-    <section class="impact-numbers section-padding section--mid" aria-label="핵심 지표">
+    <section class="impact-numbers section-padding section--mid" aria-label="Key Metrics">
       <div class="container">
         <span class="eyebrow reveal-on-scroll">Why DeepFusion AI</span>
-        <h2 class="reveal-on-scroll stagger-1">숫자로 보는 신뢰와 혁신</h2>
+        <h2 class="reveal-on-scroll stagger-1">Trust and Innovation in Numbers</h2>
         <div class="impact-numbers-grid">
           <div class="counter-card reveal-on-scroll stagger-1">
             <div class="counter-icon" aria-hidden="true">🏆</div>
@@ -152,52 +143,52 @@
     <hr class="section-divider-soft">
 
     <!-- Section 3: What We Do -->
-    <section class="what-we-do section-padding section--light" id="what-we-do" aria-label="핵심 기술 소개">
+    <section class="what-we-do section-padding section--light" id="what-we-do" aria-label="Core Technologies">
       <div class="container">
         <span class="eyebrow reveal-on-scroll">What We Do</span>
-        <h2 class="reveal-on-scroll stagger-1">레이다 인지 딥러닝과 센서 퓨전</h2>
+        <h2 class="reveal-on-scroll stagger-1">Radar Perception Deep Learning & Sensor Fusion</h2>
         <p class="what-we-do-lead reveal-on-scroll stagger-2">
-          DFAI는 레이다를 자율 시스템의 주 인지 센서로 만듭니다. 딥러닝과 센서 퓨전을 통해, 보조 센서로 머물러 있던 레이다를 판단의 중심에 세웁니다.
+          DFAI positions radar as the primary perception sensor for autonomous systems. Through deep learning and sensor fusion, we elevate radar from an auxiliary sensor to the center of decision-making.
         </p>
         <div class="grid grid-3">
           <!-- Card 1 -->
           <article class="card reveal-on-scroll stagger-1">
             <div class="card-img-wrapper">
-              <img src="assets/images/technology/01_rapa_rlc/IR_p09_img_01.png" alt="Radar AI Visualization" class="card-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
+              <img src="../assets/images/technology/01_rapa_rlc/IR_p09_img_01.png" alt="Radar AI Visualization" class="card-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
               <div class="card-img-placeholder">
                 <span>Image Coming Soon</span>
               </div>
             </div>
             <span class="card-subtitle">Technology 01</span>
             <h3>Radar AI</h3>
-            <p>카메라가 멈추는 곳에서, 레이다는 봅니다. 악천후·야간·먼지에 강인한 4D 이미징 레이다 기반 인지.</p>
-            <a href="technology.html#tech-1" class="card-link" aria-label="RAPA 플랫폼 상세 보기">RAPA 플랫폼 보기 &rarr;</a>
+            <p>Where cameras fail, radar sees. 4D imaging radar-based perception robust in bad weather, night, and dust.</p>
+            <a href="technology.html#tech-1" class="card-link" aria-label="View RAPA platform details">Explore RAPA Platform &rarr;</a>
           </article>
           <!-- Card 2 -->
           <article class="card reveal-on-scroll stagger-2">
             <div class="card-img-wrapper">
-              <img src="assets/images/technology/02_sensor_fusion/IR_p12_img_02.png" alt="Sensor Fusion Engine" class="card-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
+              <img src="../assets/images/technology/02_sensor_fusion/IR_p12_img_02.png" alt="Sensor Fusion Engine" class="card-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
               <div class="card-img-placeholder">
                 <span>Image Coming Soon</span>
               </div>
             </div>
             <span class="card-subtitle">Technology 02</span>
             <h3>Sensor Fusion</h3>
-            <p>카메라·라이다·레이다의 정보를 하나의 인지로 결합. 조기 융합(Early Fusion) 기반 멀티모달 딥러닝.</p>
-            <a href="technology.html#tech-2" class="card-link" aria-label="멀티모달 센서 퓨전 상세 보기">기술 자세히 보기 &rarr;</a>
+            <p>Unifying data from camera, LiDAR, and radar into a single perception. Multimodal deep learning based on Early Fusion.</p>
+            <a href="technology.html#tech-2" class="card-link" aria-label="View multimodal sensor fusion details">Learn More &rarr;</a>
           </article>
           <!-- Card 3 -->
           <article class="card reveal-on-scroll stagger-3">
             <div class="card-img-wrapper">
-              <img src="assets/images/technology/04_edge_ai_hw/GOV_p11_img_01.png" alt="Edge AI Hardware Module" class="card-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
+              <img src="../assets/images/technology/04_edge_ai_hw/GOV_p11_img_01.png" alt="Edge AI Hardware Module" class="card-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
               <div class="card-img-placeholder">
                 <span>Image Coming Soon</span>
               </div>
             </div>
             <span class="card-subtitle">Technology 03</span>
             <h3>Edge AI</h3>
-            <p>차량·선박에 바로 탑재 가능한 저전력 엣지 AI 아키텍처. 실시간 360도 인지를 최소 컴퓨팅으로 실현.</p>
-            <a href="technology.html#tech-4" class="card-link" aria-label="Edge AI 플랫폼 상세 보기">Edge 플랫폼 보기 &rarr;</a>
+            <p>Low-power Edge AI architecture ready for direct integration on vehicles and vessels. Real-time 360-degree perception with minimal computing.</p>
+            <a href="technology.html#tech-4" class="card-link" aria-label="View Edge AI platform details">Explore Edge Platform &rarr;</a>
           </article>
         </div>
       </div>
@@ -206,63 +197,63 @@
     <hr class="section-divider-soft">
 
     <!-- Section 4: Applications -->
-    <section class="applications section-padding section--dark" id="applications" aria-label="솔루션 적용 분야">
+    <section class="applications section-padding section--dark" id="applications" aria-label="Solution Verticals">
       <div class="container">
         <span class="eyebrow reveal-on-scroll">Where We Drive Change</span>
-        <h2 class="reveal-on-scroll stagger-1">다양한 산업군을 이끄는 인지 엔진</h2>
-        <p class="applications-subtitle reveal-on-scroll stagger-2">방산 · 해양 · 자동차 &mdash; DFAI 인지 기술이 적용되는 현장</p>
+        <h2 class="reveal-on-scroll stagger-1">Perception Engine Leading Diverse Industries</h2>
+        <p class="applications-subtitle reveal-on-scroll stagger-2">Defense · Maritime · Automotive &mdash; Fields where DFAI perception technology is deployed</p>
         <div class="grid grid-4">
           <!-- App 1 -->
           <article class="card reveal-on-scroll stagger-1">
             <div class="card-img-wrapper">
-              <img src="assets/images/solutions/01_usv/IR_p20_img_01.png" alt="Unmanned Surface Vessel Perception" class="card-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
+              <img src="../assets/images/solutions/01_usv/IR_p20_img_01.png" alt="Unmanned Surface Vessel Perception" class="card-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
               <div class="card-img-placeholder">
                 <span>Image Coming Soon</span>
               </div>
             </div>
             <span class="card-subtitle">USV</span>
-            <h3>무인수상정</h3>
-            <p>다중 센서 통합 360도 인지, 해상 환경 강건성 검증.</p>
-            <a href="solutions.html#usv" class="card-link" aria-label="무인수상정 솔루션 상세 보기">솔루션 보기 &rarr;</a>
+            <h3>Unmanned Surface Vehicles (USVs)</h3>
+            <p>Multi-sensor integrated 360-degree perception, verified robustness in maritime environments.</p>
+            <a href="solutions.html#usv" class="card-link" aria-label="View Unmanned Surface Vehicle (USV) solution details">View Solution &rarr;</a>
           </article>
           <!-- App 2 -->
           <article class="card reveal-on-scroll stagger-2">
             <div class="card-img-wrapper">
-              <img src="assets/images/solutions/02_ugv/IR_p21_img_07.png" alt="Unmanned Ground Vehicle Combat Vehicle" class="card-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
+              <img src="../assets/images/solutions/02_ugv/IR_p21_img_07.png" alt="Unmanned Ground Vehicle Combat Vehicle" class="card-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
               <div class="card-img-placeholder">
                 <span>Image Coming Soon</span>
               </div>
             </div>
             <span class="card-subtitle">UGV</span>
-            <h3>무인지상차량</h3>
-            <p>4D 레이다 센서 퓨전 기반 전투 차량 인지.</p>
-            <a href="solutions.html#ugv" class="card-link" aria-label="무인지상차량 솔루션 상세 보기">솔루션 보기 &rarr;</a>
+            <h3>Unmanned Ground Vehicles (UGVs)</h3>
+            <p>Armored and combat vehicle perception based on 4D radar sensor fusion.</p>
+            <a href="solutions.html#ugv" class="card-link" aria-label="View Unmanned Ground Vehicle (UGV) solution details">View Solution &rarr;</a>
           </article>
           <!-- App 3 -->
           <article class="card reveal-on-scroll stagger-3">
             <div class="card-img-wrapper">
-              <img src="assets/images/solutions/03_wave/IR_p23_img_03.png" alt="Wave Detection Radar System" class="card-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
+              <img src="../assets/images/solutions/03_wave/IR_p23_img_03.png" alt="Wave Detection Radar System" class="card-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
               <div class="card-img-placeholder">
                 <span>Image Coming Soon</span>
               </div>
             </div>
             <span class="card-subtitle">Wave Detection</span>
-            <h3>파도탐지</h3>
-            <p>전천후 근거리 파고 탐지, 국제 규격 대응.</p>
-            <a href="solutions.html#wave" class="card-link" aria-label="파도탐지 솔루션 상세 보기">솔루션 보기 &rarr;</a>
+            <h3>Wave Detection</h3>
+            <p>All-weather near-range wave height detection complying with international standards.</p>
+            <a href="solutions.html#wave" class="card-link" aria-label="View Wave Detection solution details">View Solution &rarr;</a>
           </article>
           <!-- App 4 -->
           <article class="card reveal-on-scroll stagger-4">
             <div class="card-img-wrapper">
-              <img src="assets/images/solutions/04_autonomous/IR_p37_img_04.png" alt="Autonomous Driving Perception ECU" class="card-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
+              <img src="../assets/images/solutions/04_autonomous/IR_p37_img_04.png" alt="Autonomous Driving Perception ECU" class="card-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
               <div class="card-img-placeholder">
                 <span>Image Coming Soon</span>
               </div>
             </div>
             <span class="card-subtitle">Autonomous Driving</span>
-            <h3>자율주행</h3>
-            <p>양산 가능한 레이다 중심 멀티모달 인지 ECU.</p>
-            <a href="solutions.html#autonomous" class="card-link" aria-label="자율주행 솔루션 상세 보기">솔루션 보기 &rarr;</a>
+            <h3>Autonomous Driving</h3>
+            <p>Production-ready radar-centric multimodal perception ECU.</p>
+            <a href="solutions.html#autonomous" class="card-link" aria-label="View Autonomous Driving solution details">View Solution &rarr;</a>
           </article>
         </div>
       </div>
@@ -271,22 +262,22 @@
     <hr class="section-divider-soft">
 
     <!-- Section 5: Trusted By -->
-    <section class="trusted-by section-padding section--white" aria-label="협력 파트너">
+    <section class="trusted-by section-padding section--white" aria-label="Partners">
       <div class="container">
         <span class="eyebrow reveal-on-scroll">Partners</span>
-        <h2 class="reveal-on-scroll stagger-1">국내외 방산·자동차·해양 산업의 신뢰</h2>
-        <p class="reveal-on-scroll stagger-2">DeepFusion AI는 글로벌 선도 기업들과 신뢰할 수 있는 파트너십을 맺어가고 있습니다.</p>
+        <h2 class="reveal-on-scroll stagger-1">Trusted Across Defense, Automotive & Maritime Industries</h2>
+        <p class="reveal-on-scroll stagger-2">DeepFusion AI is building reliable partnerships with leading global enterprises.</p>
         <div class="trusted-by-carousel-wrapper reveal-on-scroll stagger-3">
           <div class="logo-track">
-            <div class="logo-item">TIPS 프로그램</div>
-            <div class="logo-item">K-Startup 육성</div>
-            <div class="logo-item">국내 방산 파트너</div>
-            <div class="logo-item">글로벌 OEM 파트너</div>
+            <div class="logo-item">TIPS Program</div>
+            <div class="logo-item">K-Startup Program</div>
+            <div class="logo-item">Defense Partners</div>
+            <div class="logo-item">Global OEM Partners</div>
             <!-- Duplicated for Infinite Carousel effect -->
-            <div class="logo-item">TIPS 프로그램</div>
-            <div class="logo-item">K-Startup 육성</div>
-            <div class="logo-item">국내 방산 파트너</div>
-            <div class="logo-item">글로벌 OEM 파트너</div>
+            <div class="logo-item">TIPS Program</div>
+            <div class="logo-item">K-Startup Program</div>
+            <div class="logo-item">Defense Partners</div>
+            <div class="logo-item">Global OEM Partners</div>
           </div>
         </div>
       </div>
@@ -295,23 +286,23 @@
     <hr class="section-divider-soft">
 
     <!-- Section 6: Recognition -->
-    <section class="recognition section-padding section--mid" aria-label="대외 성과 및 연혁">
+    <section class="recognition section-padding section--mid" aria-label="Achievements & Milestones">
       <div class="container">
         <span class="eyebrow reveal-on-scroll">Recognition &amp; Milestones</span>
         <div class="recognition-grid">
           <div class="recognition-text reveal-on-scroll stagger-1">
-            <h2>대외 기술 경쟁력 입증</h2>
+            <h2>Proven Technological Competitiveness</h2>
             <h4>🏆 CES 2026 Innovation Award</h4>
-            <p>세계 최대 가전·기술 전시회 CES에서 혁신상 수상. 상용화 수준의 전파계 인지 딥러닝 기술을 인정받았습니다.</p>
+            <p>Awarded the Innovation Award at CES, the world's largest consumer technology show, recognizing our commercial-ready radio-wave perception deep learning technology.</p>
             <h4>📍 Selected Programs</h4>
             <ul class="recognition-list">
-              <li>K-방산 스타트업 육성사업 선정</li>
-              <li>TIPS 프로그램 선정</li>
-              <li>초격차 스타트업 1000+ 선정</li>
+              <li>Selected for the K-Defense Startup Support Program</li>
+              <li>Selected for TIPS Program</li>
+              <li>Selected for the Super Gap Startup 1000+ Program</li>
             </ul>
           </div>
           <div class="recognition-img-wrapper reveal-on-scroll stagger-2">
-            <img src="assets/images/about/milestones/IR_p25_img_01.png" alt="Milestones Infographic" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
+            <img src="../assets/images/about/milestones/IR_p25_img_01.png" alt="Milestones Infographic" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
             <div class="card-img-placeholder" style="min-height: 300px; display: none;">
               <span>Milestones Image Coming Soon</span>
             </div>
@@ -323,14 +314,14 @@
     <hr class="section-divider-soft">
 
     <!-- Section 7: Contact CTA -->
-    <section class="contact-cta section-padding section--dark" aria-label="협력 문의">
+    <section class="contact-cta section-padding section--dark" aria-label="Inquiries">
       <div class="radial-glow" aria-hidden="true"></div>
       <div class="container contact-cta-content reveal-on-scroll">
-        <h2>미래의 인지 기술,<br>함께 만들어가시겠습니까?</h2>
-        <p>DFAI는 방산·해양·자동차 분야의 파트너와 새로운 자율 시스템을 만들어가고 있습니다.</p>
+        <h2>Let's Build the Future Together.</h2>
+        <p>DFAI is building new autonomous systems with partners in defense, maritime, and automotive sectors.</p>
         <div class="contact-cta-buttons">
-          <a href="contact.html#form" class="btn btn-primary" aria-label="솔루션 문의하기">솔루션 문의 &rarr;</a>
-          <a href="about.html" class="btn btn-secondary" aria-label="회사 소개 보기">회사 소개 보기</a>
+          <a href="contact.html#form" class="btn btn-primary" aria-label="Inquire Solutions">Inquire Solutions &rarr;</a>
+          <a href="about.html" class="btn btn-secondary" aria-label="About Us">About Us</a>
         </div>
       </div>
     </section>
@@ -346,16 +337,16 @@
             Radar-Centric Sensor Fusion AI
           </p>
           <p style="font-size: var(--fs-sm); color: var(--color-soft-gray);">
-            자율·무인 시대의 인지를 다시 정의합니다.
+            Redefining perception for the autonomous era.
           </p>
         </div>
         <div class="footer-col">
           <h4>Solutions</h4>
           <ul>
-            <li><a href="solutions.html#usv" class="footer-link">USV (무인수상정)</a></li>
-            <li><a href="solutions.html#ugv" class="footer-link">UGV (무인지상차량)</a></li>
-            <li><a href="solutions.html#wave" class="footer-link">Wave Detection (파고탐지)</a></li>
-            <li><a href="solutions.html#autonomous" class="footer-link">Autonomous Driving (자율주행)</a></li>
+            <li><a href="solutions.html#usv" class="footer-link">USV (Unmanned Surface Vehicle)</a></li>
+            <li><a href="solutions.html#ugv" class="footer-link">UGV (Unmanned Ground Vehicle)</a></li>
+            <li><a href="solutions.html#wave" class="footer-link">Wave Detection</a></li>
+            <li><a href="solutions.html#autonomous" class="footer-link">Autonomous Driving</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -371,18 +362,18 @@
           <h4>Connect</h4>
           <ul style="gap: var(--space-sm); font-size: var(--fs-xs); color: var(--color-soft-gray);">
             <li>
-              <strong>본사 (Headquarters)</strong><br>
-              경상북도 경산시 대학로 280, 생산기술연구원 218호
+              <strong>Headquarters</strong><br>
+              Rm 218, KITECH, 280 Daehak-ro, Gyeongsan-si, Gyeongsangbuk-do, Republic of Korea
             </li>
             <li>
-              <strong>서울 연구소 (Seoul R&D Center)</strong><br>
-              서울특별시 강남구 광평로51길 6-27, 성우빌딩 201호
+              <strong>Seoul R&D Center</strong><br>
+              2F-201, Seongwoo Bldg., 6-27 Gwangpyeong-ro 51-gil, Gangnam-gu, Seoul, Republic of Korea
             </li>
             <li style="margin-top: var(--space-xs);">
-              이메일: <a href="mailto:contact@deep-fusion.com" class="footer-link">contact@deep-fusion.com</a>
+              Email: <a href="mailto:contact@deep-fusion.com" class="footer-link">contact@deep-fusion.com</a>
             </li>
             <li>
-              웹사이트: <a href="https://www.deep-fusion.com" class="footer-link">deep-fusion.com</a>
+              Website: <a href="https://www.deep-fusion.com" class="footer-link">deep-fusion.com</a>
             </li>
             <li>
               LinkedIn: <a href="https://www.linkedin.com/company/deepfusion-ai/" class="footer-link">linkedin.com/company/deepfusion-ai</a>

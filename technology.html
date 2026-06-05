@@ -12,6 +12,10 @@
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/animations.css">
   <link rel="stylesheet" href="assets/css/technology.css">
+  <!-- Multilingual SEO -->
+  <link rel="alternate" hreflang="ko" href="https://www.deep-fusion.com/technology.html">
+  <link rel="alternate" hreflang="en" href="https://www.deep-fusion.com/en/technology.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.deep-fusion.com/technology.html">
 </head>
 <body>
   <!-- Header -->
@@ -33,6 +37,11 @@
           <li><a href="solutions.html" class="nav-link">Solutions</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
+        <div class="lang-switcher" role="group" aria-label="Language">
+          <a href="technology.html" class="lang-link active" aria-current="true">KO</a>
+          <span class="lang-divider">|</span>
+          <a href="en/technology.html" class="lang-link" hreflang="en">EN</a>
+        </div>
       </nav>
     </div>
   </header>
@@ -406,5 +415,13 @@
 
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/animations.js" defer></script>
+  <script>
+    document.querySelectorAll('.lang-link').forEach(function(el) {
+      el.addEventListener('click', function() {
+        var isKo = el.textContent.trim() === 'KO';
+        localStorage.setItem('dfai_lang_pref', isKo ? 'ko' : 'en');
+      });
+    });
+  </script>
 </body>
 </html>
