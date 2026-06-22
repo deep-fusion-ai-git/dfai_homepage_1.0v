@@ -43,6 +43,10 @@
   box-shadow: var(--shadow-card);
 }
 
+.sol-main-img--small {
+  max-width: 680px; /* Reduced size for specific main images like UGV */
+}
+
 .sol-main-img img {
   display: block;
   width: 100%;

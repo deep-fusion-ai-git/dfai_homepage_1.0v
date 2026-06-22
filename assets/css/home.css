@@ -88,32 +88,105 @@
 /* === Hero 전체 컨테이너 === */
 .hero {
   position: relative;
-  width: 100%;
-
-  /* ★ 핵심: min-height 를 100vh 대신 적절한 값으로 */
-  min-height: 78vh;
-  max-height: 900px;
-
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  padding: calc(var(--header-height, 80px) + 3rem) 1.5rem 4rem;
+  width: 100vw;
+  height: 100vh; /* Exactly fill the viewport */
+  padding: 0;
+  margin: 0;
   overflow: hidden;
+  background-color: #050E1E;
+}
 
-  background:
-    linear-gradient(
-      135deg,
-      rgba(10, 31, 68, 0.50) 0%,
-      rgba(14, 38, 84, 0.25) 45%,
-      rgba(10, 31, 68, 0.55) 100%
-    ),
-    url("../images/home/hero/hero_main.jpg") center/cover no-repeat;
-  background-color: #0A1F44;  /* 이미지가 안 채우는 영역 fallback */
-  text-align: left;
+.hero-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Put behind overlay */
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1; 
+}
+
+.hero-slide.active {
+  opacity: 1;
+  z-index: 2; 
+}
+
+.hero-slide video,
+.hero-slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Semi-transparent dark overlay to keep layout neat */
+.hero-slide::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(5, 14, 30, 0.55) 0%,
+    rgba(5, 14, 30, 0.3) 50%,
+    rgba(5, 14, 30, 0.65) 100%
+  );
+  z-index: 2; /* Position above video, but below controls */
+  pointer-events: none;
+}
+
+/* Dots navigation */
+.hero-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: var(--space-sm);
+  z-index: 100; /* Ensure dots are on top and clickable */
+}
+
+.hero-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  padding: 0;
+  transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.hero-dot:hover {
+  background: rgba(6, 182, 212, 0.8);
+}
+
+.hero-dot.active {
+  background: var(--accent-cyan);
+  border-color: var(--text-primary);
+  transform: scale(1.2);
 }
 
 .hero-bg {
-  display: none; /* Hide HTML .hero-bg to let Strategy A's CSS background work without interference */
+  display: none;
 }
 
 /* Radar SVG Grid Pattern */
@@ -128,7 +201,7 @@
   background-size: 32px 32px;
   opacity: 0.8;
   pointer-events: none;
-  z-index: 3;
+  z-index: 1; /* Send behind slider content */
 }
 
 /* === 배경 오버레이 약화 (home.css) === */
@@ -139,14 +212,11 @@
   background:
     radial-gradient(ellipse at 60% 50%, rgba(6,182,212,0.06) 0%, transparent 65%),
     linear-gradient(180deg, rgba(10,31,68,0.20) 0%, rgba(10,31,68,0.40) 100%);
-  z-index: 1;
+  z-index: 1; /* Send behind slider content */
   pointer-events: none;
 }
 
-.hero > * {
-  position: relative;
-  z-index: 2;
-}
+/* Removed .hero > * relative rule to prevent breaking full-screen layout of absolute elements */
 
 /* Glowing Orbs */
 .hero-glow-orb {
@@ -206,15 +276,13 @@
 }
 
 /* === Hero 내부 래퍼 === */
-.hero > *,
 .hero .container,
 .hero-inner,
 .hero-wrapper,
 .hero-content {
   width: 100%;
-  max-width: 1200px;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  max-width: 100%; /* Override to allow fullscreen */
+  margin: 0;
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
@@ -222,28 +290,93 @@
   z-index: 2;
 }
 
-/* === 글래스 패널 자체 === */
-.hero-panel,
-.hero-card,
-.hero-glass,
-.hero .glass-panel {
-  width: 100%;
-  max-width: 720px;
-  margin-left: auto !important;
-  margin-right: auto !important;        /* ★ 카드도 중앙 */
-  padding: 3rem 3.5rem;
-  border-radius: 16px;
-
-  /* ★ 투명도 핵심: 알파를 더 낮춰 배경이 잘 보이게 */
-  background: rgba(10, 31, 68, 0.18);   /* 기존 0.28 → 0.18 */
-  border: 1px solid rgba(6, 182, 212, 0.22);
-  backdrop-filter: blur(10px) saturate(130%);
-  -webkit-backdrop-filter: blur(10px) saturate(130%);
-
-  box-shadow:
-    0 10px 40px rgba(0, 0, 0, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+/* === Hero Text Overlay Center === */
+.hero-overlay-text {
+  position: absolute;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 1000 !important; /* Move above everything else */
+  text-align: center;
+  pointer-events: none; /* Let clicks pass through to dots */
+  width: 90% !important;
+  max-width: 900px !important;
 }
+
+.hero-text-item {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.hero-text-item.active {
+  display: flex;
+}
+
+.hero-text-logo {
+  max-width: 480px; /* Make the logo prominent */
+  width: 90%;
+  height: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+  display: block;
+  margin: 0 auto;
+}
+
+.hero-text-item.active .hero-text-logo {
+  animation: heroTextFadeUp 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.1s;
+}
+
+.hero-text-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 0 40px rgba(6, 182, 212, 0.5);
+  margin: 0;
+  line-height: 1.2;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.hero-text-desc {
+  font-family: var(--font-sans);
+  font-size: clamp(1.6rem, 3.2vw, 2.6rem); /* Increased from clamp(1.25rem, 2.5vw, 2rem) */
+  font-weight: 600;
+  color: rgba(240, 249, 255, 0.95);
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.8), 0 0 20px rgba(6, 182, 212, 0.3);
+  margin: 0;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Animations when active class is added (Slowed down to 1.6s) */
+.hero-text-item.active .hero-text-title {
+  animation: heroTextFadeUp 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.1s;
+}
+
+.hero-text-item.active .hero-text-desc {
+  animation: heroTextFadeUp 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes heroTextFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 
 /* === 텍스트 가독성 보강 (home.css) === */
 .hero h1,
@@ -369,6 +502,45 @@
   margin-top: var(--space-xs);
 }
 
+/* Custom 2-column layout for new What We Do section */
+.what-we-do-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.what-we-do-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.what-we-do-text .what-we-do-lead {
+  margin-bottom: var(--space-xl);
+  text-align: left;
+}
+
+.what-we-do-media {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--bg-card-border);
+  box-shadow: var(--shadow-card);
+}
+
+.what-we-do-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .what-we-do-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+}
+
 .card-subtitle {
   font-size: var(--fs-xs);
   text-transform: uppercase;
@@ -397,6 +569,17 @@
   margin-bottom: var(--space-2xl);
 }
 
+.applications .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.applications .card p {
+  margin-bottom: var(--space-lg);
+  flex-grow: 1; /* push button to the bottom */
+}
+
 .applications .card h3 {
   font-size: var(--fs-lg);
   color: var(--text-primary);
@@ -406,12 +589,16 @@
   color: var(--text-eyebrow);
 }
 
-.applications .card-link {
-  color: var(--accent-cyan);
+.applications .card-img-wrapper {
+  aspect-ratio: 4 / 3; /* Larger aspect ratio (4:3 instead of 16:9) */
 }
 
-.applications .card-link:hover {
-  color: var(--text-primary);
+.applications .btn-primary {
+  align-self: flex-start;
+  margin-top: auto;
+  font-size: var(--fs-sm);
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
 }
 
 /* Trusted By - Logo Carousel */
@@ -527,7 +714,7 @@
 .recognition-text h4 {
   font-size: var(--fs-lg);
   color: var(--text-primary);
-  margin-top: var(--space-lg);
+  margin-top: var(--space-md);
   margin-bottom: var(--space-xs);
 }
 
@@ -539,7 +726,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
-  margin-top: var(--space-sm);
+  margin-top: var(--space-xs);
 }
 
 .recognition-list li {
@@ -558,15 +745,43 @@
 
 .recognition-img-wrapper {
   border-radius: var(--radius-lg);
-  overflow: hidden;
-  border: 1px solid rgba(6, 182, 212, 0.1);
+  border: 1px solid rgba(6, 182, 212, 0.15);
   box-shadow: var(--shadow-lg);
+  padding: var(--space-lg);
+  background: rgba(10, 31, 68, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
 }
+
+.recognition-main-img img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  display: block;
+}
+
+.certificates-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+}
+
+.certificates-row img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: var(--shadow-md);
+  display: block;
+}
+
 
 @media (min-width: 768px) {
   .recognition-grid {
-    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-columns: 1fr 1.3fr;
     align-items: center;
+    gap: var(--space-3xl);
   }
 }
 
@@ -630,68 +845,10 @@
   }
 }
 
-/* ===== Hero 중앙 정렬 강제 (최종 오버라이드 - Step 3) ===== */
-section.hero {
-  display: flex !important;
-  align-items: center !important;       /* 세로 중앙 */
-  justify-content: center !important;   /* 가로 중앙 */
-}
-
-/* 모바일/태블릿에서는 더 짧게 */
-@media (max-width: 768px) {
-  .hero {
-    min-height: 70vh !important;
-    padding: calc(var(--header-height-mobile, 64px) + 2rem) 1rem 3rem !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    min-height: 65vh !important;
-  }
-}
-
-/* 데스크톱 큰 화면에서 이미지 잘림 방지 - Step 4 */
-@media (min-width: 1600px) {
-  .hero {
-    background-size: cover !important;
-    background-position: center 40% !important;
-  }
-}
-
-section.hero > *,
-section.hero .container,
-section.hero .hero-inner,
-section.hero .hero-content {
+/* Remove restrictive rules that override hero elements and alignment */
+section.hero > .hero-slider,
+section.hero > .hero-dots {
   width: 100% !important;
-  max-width: 1200px !important;
-  margin: 0 auto !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  position: relative;
-  z-index: 2;
+  max-width: 100% !important;
 }
 
-section.hero .hero-panel,
-section.hero .hero-card,
-section.hero .hero-glass,
-section.hero .glass-panel {
-  width: 100% !important;
-  max-width: 720px !important;
-  margin: 0 auto !important;
-  float: none !important;            /* float 해제 */
-  position: relative !important;     /* absolute 해제 */
-  left: auto !important;
-  right: auto !important;
-  transform: none !important;        /* translate 해제 */
-
-  /* 투명도·블러·패딩 유지 */
-  background: rgba(10, 31, 68, 0.22) !important;
-  border: 1px solid rgba(6, 182, 212, 0.22) !important;
-  backdrop-filter: blur(12px) saturate(130%) !important;
-  -webkit-backdrop-filter: blur(12px) saturate(130%) !important;
-  padding: 3rem 3.5rem !important;
-  border-radius: 16px !important;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.3) !important;
-}
