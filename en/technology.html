@@ -127,7 +127,7 @@
           <!-- Pillar 5 -->
           <a href="#tech-5" class="card tech-overview-card reveal-on-scroll stagger-5">
             <div class="pillar-num">05</div>
-            <h3>Distributed Data</h3>
+            <h3>Pre/Post Processing (Denoising, Tracker)</h3>
             <p data-i18n="tech.tech-overview.p_text_5">Virtual Data Synthesis & Federated Learning</p>
           </a>
           <!-- Pillar 6 -->
@@ -201,7 +201,7 @@
           <div class="tech-text reveal-on-scroll">
             <span data-i18n="tech.tech-3.span_text" class="eyebrow">Pillar 03</span>
             <h2 data-i18n="tech.tech-3.h2_title">Real-time 3D Mapping</h2>
-            <p data-i18n="tech.tech-3.p_text">Visualizes the environmental structures and obstacles measured by radar as 3D point cloud maps, transmitting them in real-time to control rooms and mobile apps.</p>
+            <p data-i18n="tech.tech-3.p_text">We possess unique SLAM technology that visualizes surrounding environments and obstacles as 3D point cloud maps using only radar measurements without GPS. Through this technology, we generate radar-based HD Maps in real-time, perfectly supporting high-precision location estimation which is the core of indoor/outdoor autonomous valet parking.</p>
             <ul class="tech-features">
               <li data-i18n="tech.tech-3.li_text">WebGL-based low-latency rendering framework</li>
               <li data-i18n="tech.tech-3.li_text_2">Visual warning system for obstacle collision risk zones in control rooms</li>
@@ -210,8 +210,8 @@
           </div>
           <div class="tech-gallery reveal-on-scroll stagger-1">
             <div class="gallery-grid vertical-stack-small">
-              <img src="../assets/images/technology/03_visualization/GOV_p08_img_01.png" alt="3D Visualization Simulator" loading="lazy">
-              <img src="../assets/images/technology/03_visualization/GOV_p08_img_02.png" alt="Web-integrated Control Monitor" loading="lazy">
+              <img src="../assets/images/technology/03_visualization/SLAM.png" alt="SLAM Visualization" loading="lazy">
+              <img src="../assets/images/technology/03_visualization/HDMAP.png" alt="HD Map Generation" loading="lazy">
             </div>
           </div>
         </div>
@@ -233,9 +233,9 @@
             <h2 data-i18n="tech.tech-4.h2_title">Edge Compute Module</h2>
             <p data-i18n="tech.tech-4.p_text">We package and deploy custom low-power edge computing hardware optimized for vehicles and small vessels, enabling standalone onboard inference without high-performance GPU servers.</p>
             <ul class="tech-features">
-              <li data-i18n="tech.tech-4.li_text">Ultra-low power operation (under 25W)</li>
+              <li data-i18n="tech.tech-4.li_text">Optimization of GPU/FPGA-based AI models and ultra-low power operation (under 25W)</li>
               <li data-i18n="tech.tech-4.li_text_2">IP67 waterproof and dustproof case packaging complete (conforming to marine & military validation standards)</li>
-              <li data-i18n="tech.tech-4.li_text_3">Built-in real-time automotive CAN bus communication interface</li>
+              <li data-i18n="tech.tech-4.li_text_3">10Gbps ultra-high speed optical communication sensor packaging and real-time CAN bus communication</li>
             </ul>
           </div>
         </div>
@@ -243,22 +243,21 @@
     </section>
 
     <!-- Tech 5 — Distributed Data -->
-    <section class="tech-section section-padding" id="tech-5" style="background-color: #0A1F44;" aria-label="Distributed Data">
+    <section class="tech-section section-padding" id="tech-5" style="background-color: #0A1F44;" aria-label="Pre/Post Processing">
       <div class="container">
         <div class="tech-layout text-left">
           <div class="tech-text reveal-on-scroll">
             <span data-i18n="tech.tech-5.span_text" class="eyebrow">Pillar 05</span>
-            <h2 data-i18n="tech.tech-5.h2_title">Virtual Data &amp; Federations</h2>
-            <p data-i18n="tech.tech-5.p_text">For simulating driving in data-scarce environments like night waves or classified military zones, we apply virtual radar signal synthesis technology and secure Federated Learning.</p>
+            <h2 data-i18n="tech.tech-5.h2_title">Pre/Post Processing (Denoising, Tracker)</h2>
+            <p data-i18n="tech.tech-5.p_text">DFAI's highly reliable signal processing and tracking framework secures extremely accurate and seamless real-time obstacle tracking paths through precise raw signal analysis.</p>
             <ul class="tech-features">
-              <li data-i18n="tech.tech-5.li_text">Realistic virtual RF diffuse reflection signal simulation synthesis</li>
-              <li data-i18n="tech.tech-5.li_text_2">Distributed Federated Learning that updates AI models without transferring raw server data</li>
-              <li data-i18n="tech.tech-5.li_text_3">Constructed virtual radar datasets of 600,000+ records</li>
+              <li data-i18n="tech.tech-5.li_text">Raw data preprocessing technology optimized for Radar sensor characteristics (data augmentation)</li>
+              <li data-i18n="tech.tech-5.li_text_2">Missing frame synchronization across input sensors and stable estimation for inferred objects</li>
             </ul>
           </div>
           <div class="tech-gallery reveal-on-scroll stagger-1">
             <div class="gallery-grid single-image">
-              <img src="../assets/images/technology/05_distributed_data/GOV_p13_img_03.png" alt="Distributed framework design" loading="lazy">
+              <img src="../assets/images/technology/05_distributed_data/ugv3.png" alt="Pre/Post Processing Visualization" loading="lazy">
             </div>
           </div>
         </div>
@@ -276,12 +275,12 @@
           </div>
           <div class="tech-text reveal-on-scroll stagger-1">
             <span data-i18n="tech.tech-6.span_text" class="eyebrow">Pillar 06</span>
-            <h2 data-i18n="tech.tech-6.h2_title">Full-Range Object Tracker</h2>
-            <p data-i18n="tech.tech-6.p_text">Through cluster analysis of radar reflection points, we extract precise coordinates and tracking vectors of small obstacles (e.g., swimmers, small ground debris).</p>
+            <h2 data-i18n="tech.tech-6.h2_title">AI Perception & Auto-Labeling</h2>
+            <p data-i18n="tech.tech-6.p_text">Based on DFAI's proprietary advanced deep learning model, we precisely perceive even small ground and marine obstacles, and possess an automatic labeling pipeline to efficiently construct large-scale training datasets.</p>
             <ul class="tech-features">
-              <li data-i18n="tech.tech-6.li_text">Real-time dimension detection using 3D bounding boxes</li>
-              <li data-i18n="tech.tech-6.li_text_2">Clutter filtering and centroid extraction of objects</li>
-              <li data-i18n="tech.tech-6.li_text_3">Mutual calibration with camera-matched 2D detectors</li>
+              <li data-i18n="tech.tech-6.li_text">Equipped with 3D & 2D high-precision object perception deep learning models based on RAPA-R / RAPA-RC</li>
+              <li data-i18n="tech.tech-6.li_text_2">Dataset auto-labeling technology that improves speed by over 90% compared to manual work</li>
+              <li data-i18n="tech.tech-6.li_text_3">Possession of large-scale multimodal datasets for real roads (30K) and marine vessel (10K) environments</li>
             </ul>
           </div>
         </div>
@@ -294,17 +293,17 @@
         <div class="tech-layout text-left">
           <div class="tech-text reveal-on-scroll">
             <span data-i18n="tech.tech-7.span_text" class="eyebrow">Pillar 07</span>
-            <h2 data-i18n="tech.tech-7.h2_title">Patent-Proven Algorithms</h2>
-            <p data-i18n="tech.tech-7.p_text">Core patented technologies driving our CES 2026 Vehicle Tech Innovation Award, utilizing phase difference correction and beamforming acceleration algorithms.</p>
+            <h2 data-i18n="tech.tech-7.h2_title">Virtual radar & pre training ai model</h2>
+            <p data-i18n="tech.tech-7.p_text">Through the world's best virtual radar synthesis and training acceleration technologies, we realize perfect accuracy even in extreme physical environments.</p>
             <ul class="tech-features">
-              <li data-i18n="tech.tech-7.li_text">Secured patent for real-time phase matching technology</li>
-              <li data-i18n="tech.tech-7.li_text_2">Custom beamforming optimization scaling computing speed by 3x</li>
-              <li data-i18n="tech.tech-7.li_text_3">95%+ data recovery rate guaranteed in propagation-loss environments</li>
+              <li data-i18n="tech.tech-7.li_text">The world's only 4D imaging radar virtualization technology that secured 600,000+ datasets</li>
+              <li data-i18n="tech.tech-7.li_text_2">Two-Way multimodal deep learning models based on RAPA-R and Knowledge Distillation</li>
+              <li data-i18n="tech.tech-7.li_text_3">Achieving virtual LiDAR-level (128ch) high-precision perception accuracy through real data fine-tuning</li>
             </ul>
           </div>
           <div class="tech-gallery reveal-on-scroll stagger-1">
             <div class="gallery-grid single-image large-image">
-              <img src="../assets/images/technology/07_original/patent_proven.png" alt="Patent Proven Algorithm" loading="lazy">
+              <img src="../assets/images/technology/07_original/original_tech.png" alt="Virtual radar & pre training ai model" loading="lazy">
             </div>
           </div>
         </div>
