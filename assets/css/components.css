@@ -32,18 +32,15 @@
 }
 
 .logo {
-  font-family: var(--font-display);
-  font-size: var(--fs-lg);
-  font-weight: 800;
-  color: var(--text-primary);
-  letter-spacing: -0.02em;
   display: flex;
   align-items: center;
-  gap: var(--space-xs);
 }
 
-.logo span {
-  color: var(--accent-cyan);
+.logo img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .main-nav ul {
