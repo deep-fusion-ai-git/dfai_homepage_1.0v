@@ -47,14 +47,16 @@
   max-width: 680px; /* Reduced size for specific main images like UGV */
 }
 
-.sol-main-img img {
+.sol-main-img img,
+.sol-main-img video {
   display: block;
   width: 100%;
   height: auto;
   transition: transform var(--transition-slow);
 }
 
-.sol-main-img:hover img {
+.sol-main-img:hover img,
+.sol-main-img:hover video {
   transform: scale(1.01);
 }
 
