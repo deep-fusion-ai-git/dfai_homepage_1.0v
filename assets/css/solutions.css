@@ -43,6 +43,21 @@
   box-shadow: var(--shadow-card);
 }
 
+.sol-media-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  max-width: 1200px;
+  margin: 0 auto var(--space-xl);
+}
+
+@media (max-width: 768px) {
+  .sol-media-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}
+
 .sol-main-img--small {
   max-width: 680px; /* Reduced size for specific main images like UGV */
 }
