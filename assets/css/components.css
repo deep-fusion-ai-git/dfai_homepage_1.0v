@@ -37,10 +37,15 @@
 }
 
 .logo img {
-  height: 36px;
+  height: 48px;
   width: auto;
   object-fit: contain;
   display: block;
+  transition: height var(--transition-base);
+}
+
+.site-header--scrolled .logo img {
+  height: 38px;
 }
 
 .main-nav ul {
