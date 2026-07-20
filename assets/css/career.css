@@ -1,0 +1,159 @@
+/* === Career Page CSS === */
+
+/* Talent section cards */
+.talent-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+@media (max-width: 768px) {
+  .talent-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}
+
+.talent-card {
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+  background: var(--bg-card);
+  border: 1px solid var(--bg-card-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-base), border-color var(--transition-base);
+}
+
+.talent-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-cyan);
+}
+
+.talent-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-md);
+}
+
+.talent-card h3 {
+  font-size: var(--fs-md);
+  color: var(--accent-cyan);
+  margin-bottom: var(--space-sm);
+}
+
+.talent-card p {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Welfare Section */
+.welfare-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+@media (max-width: 992px) {
+  .welfare-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .welfare-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.welfare-card {
+  padding: var(--space-lg);
+  background: var(--bg-card);
+  border: 1px solid var(--bg-card-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-start;
+  transition: background var(--transition-base);
+}
+
+.welfare-card:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.welfare-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.welfare-info h3 {
+  font-size: var(--fs-base);
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.welfare-info p {
+  font-size: var(--fs-xs);
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Job Openings */
+.jobs-list {
+  max-width: 800px;
+  margin: var(--space-xl) auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.job-item {
+  background: var(--bg-card);
+  border: 1px solid var(--bg-card-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.job-item:hover {
+  border-color: var(--accent-cyan);
+  box-shadow: var(--shadow-card);
+}
+
+@media (max-width: 640px) {
+  .job-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+}
+
+.job-details h3 {
+  font-size: var(--fs-md);
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.job-tags {
+  display: flex;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+}
+
+.job-tag {
+  font-size: var(--fs-xs);
+  color: var(--accent-cyan);
+  background: rgba(0, 240, 255, 0.08);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(0, 240, 255, 0.15);
+}
+
+.job-item .btn {
+  padding: var(--space-xs) var(--space-md);
+  font-size: var(--fs-xs);
+}
