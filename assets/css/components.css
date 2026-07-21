@@ -140,6 +140,10 @@
   grid-template-columns: 1fr;
 }
 
+.grid-5 {
+  grid-template-columns: 1fr;
+}
+
 /* Card Styles */
 .card {
   background: var(--bg-card);
@@ -285,6 +289,9 @@
   .grid-4 {
     grid-template-columns: repeat(2, 1fr);
   }
+  .grid-5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -299,6 +306,9 @@
   }
   .grid-4 {
     grid-template-columns: repeat(4, 1fr);
+  }
+  .grid-5 {
+    grid-template-columns: repeat(5, 1fr);
   }
   .footer-grid {
     grid-template-columns: repeat(4, 1fr);

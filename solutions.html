@@ -72,8 +72,8 @@
     <section class="solutions-overview-section section-padding section--mid" id="solutions-overview" aria-label="솔루션 리스트">
       <div class="container">
         <span data-i18n="solutions.solutions-overview.span_text" class="eyebrow reveal-on-scroll">Overview</span>
-        <h2 data-i18n="solutions.solutions-overview.h2_title" class="reveal-on-scroll stagger-1">네 가지 도메인 맞춤 솔루션</h2>
-        <div class="grid grid-4">
+        <h2 data-i18n="solutions.solutions-overview.h2_title" class="reveal-on-scroll stagger-1">다섯 가지 도메인 맞춤 솔루션</h2>
+        <div class="grid grid-5">
           <!-- Sol 1 Link -->
           <a href="#solution-usv" class="card solution-card-nav reveal-on-scroll stagger-1">
             <h3>USV</h3>
@@ -93,6 +93,11 @@
           <a href="#solution-autonomous" class="card solution-card-nav reveal-on-scroll stagger-4">
             <h3>Autonomous Driving</h3>
             <p data-i18n="solutions.solutions-overview.p_text_4">양산형 자율주행 차량용 ADAS 센서 퓨전</p>
+          </a>
+          <!-- Sol 5 Link -->
+          <a href="#solution-amr" class="card solution-card-nav reveal-on-scroll stagger-5">
+            <h3>AMR</h3>
+            <p>물류 및 산업 현장용 자율 이동 로봇</p>
           </a>
         </div>
       </div>
@@ -270,13 +275,42 @@
       </div>
     </section>
 
-    <!-- Section 7: One Engine, Four Solutions -->
+    <!-- Section 6-2: Solution 5 — AMR -->
+    <section class="solution-detail section-padding" id="solution-amr" style="background-color: #0A1F44;" aria-label="AMR 솔루션">
+      <div class="container">
+        <div class="sol-header reveal-on-scroll">
+          <span class="eyebrow">Solution 05</span>
+          <h2>AMR 물류/산업용 자율주행 로봇 인지 솔루션</h2>
+        </div>
+        
+        <div class="sol-main-img reveal-on-scroll stagger-1">
+          <video src="assets/images/solutions/05_amr/amr_video.mp4" autoplay loop muted playsinline></video>
+        </div>
+
+        <div class="grid grid-3 sol-features">
+          <div class="card">
+            <h3>4D 레이다 실내외 3D SLAM</h3>
+            <p>조명 변동 및 먼지·연기가 가득한 산업 현장에서도 광학 센서의 한계를 극복하고 4D 레이다 기반의 고정밀 3D 지도 작성과 자위치를 정밀 추정합니다.</p>
+          </div>
+          <div class="card">
+            <h3>동적 사물 360° 실시간 실증 탐지</h3>
+            <p>물류창고 및 공장 내 무작위로 이동하는 작업자, 지게차, 장애물을 사각지대 없이 360° 고속 사물 감지 및 동적 궤적 추적으로 사전에 충돌을 방지합니다.</p>
+          </div>
+          <div class="card">
+            <h3>초저전력 엣지 AI 융합 모듈</h3>
+            <p>소형 AMR 배터리 환경에 최적화된 저전력 On-Device AI 컴퓨팅 모듈로 실시간 라벨링 및 초저지연 제어 명령을 원스톱으로 지원합니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: One Engine, Five Solutions -->
     <section class="integration-message-section section-padding section--dark" aria-label="통합 플랫폼 메시지">
       <div class="container message-content reveal-on-scroll">
         <span data-i18n="solutions.integration-message.span_text" class="eyebrow">Single Core Engine</span>
-        <h2>동일한 센서 퓨전 엔진,<br>확장 가능한 네 개의 세상</h2>
+        <h2>동일한 센서 퓨전 엔진,<br>확장 가능한 다섯 개의 세상</h2>
         <p data-i18n="solutions.integration-message.p_text" class="lead-p">
-          DeepFusion AI의 알고리즘 코어는 하드웨어와 도메인에 구애받지 않습니다. 해상의 무인 수상정에서 수집된 격렬한 노이즈 극복 모델은 지상의 험지 UGV와 일반 ADAS 자율주행 차량 인지 필터링으로 즉시 수평 확장됩니다. 우리는 최소한의 하드웨어 변경만으로 다양한 현장에 맞는 완벽한 전파 인공지능을 제공합니다.
+          DeepFusion AI의 알고리즘 코어는 하드웨어와 도메인에 구애받지 않습니다. 해상의 무인 수상정에서 수집된 격렬한 노이즈 극복 모델은 지상의 험지 UGV, 일반 자율주행 차량, 파도 탐지, 그리고 자율 이동 로봇(AMR) 인지 필터링으로 즉시 수평 확장됩니다. 우리는 최소한의 하드웨어 변경만으로 다양한 현장에 맞는 완벽한 전파 인공지능을 제공합니다.
         </p>
       </div>
     </section>
@@ -337,6 +371,7 @@
             <li><a href="solutions.html#ugv" class="footer-link">UGV (무인지상차량)</a></li>
             <li><a href="solutions.html#wave" class="footer-link">Wave Detection (파고탐지)</a></li>
             <li><a href="solutions.html#autonomous" class="footer-link">Autonomous Driving (자율주행)</a></li>
+            <li><a href="solutions.html#amr" class="footer-link">AMR (자율이동로봇)</a></li>
           </ul>
         </div>
         <div class="footer-col">
