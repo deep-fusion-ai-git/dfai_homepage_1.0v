@@ -4,8 +4,10 @@
   <script>
     (function() {
       var path = window.location.pathname;
-      var isRoot = path.endsWith('/en/') || path.endsWith('/en') || path.split('/').pop() === '';
-      if (isRoot) {
+      var file = path.split('/').pop().toLowerCase();
+      var pages = ['index.html', 'solutions.html', 'technology.html', 'about.html', 'contact.html', 'career.html'];
+      var isPage = pages.some(function(p) { return file === p; });
+      if (!isPage) {
         window.location.replace('solutions.html');
       }
     })();
