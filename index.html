@@ -3,19 +3,23 @@
 <head>
   <script>
     (function() {
-      var langPref = localStorage.getItem('dfai_lang_pref');
-      if (!langPref) {
-        var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-        if (lang.indexOf('ko') === -1 && lang.indexOf('en') === 0) {
-          langPref = 'en';
-        } else {
-          langPref = 'ko';
+      var path = window.location.pathname;
+      var isRoot = path.endsWith('/') || path.split('/').pop() === '';
+      if (isRoot) {
+        var langPref = localStorage.getItem('dfai_lang_pref');
+        if (!langPref) {
+          var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+          if (lang.indexOf('ko') === -1 && lang.indexOf('en') === 0) {
+            langPref = 'en';
+          } else {
+            langPref = 'ko';
+          }
         }
-      }
-      if (langPref === 'en') {
-        window.location.replace('en/solutions.html');
-      } else {
-        window.location.replace('solutions.html');
+        if (langPref === 'en') {
+          window.location.replace('en/solutions.html');
+        } else {
+          window.location.replace('solutions.html');
+        }
       }
     })();
   </script>

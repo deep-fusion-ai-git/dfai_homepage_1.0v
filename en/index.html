@@ -2,7 +2,13 @@
 <html lang="en">
 <head>
   <script>
-    window.location.replace('solutions.html');
+    (function() {
+      var path = window.location.pathname;
+      var isRoot = path.endsWith('/en/') || path.endsWith('/en') || path.split('/').pop() === '';
+      if (isRoot) {
+        window.location.replace('solutions.html');
+      }
+    })();
   </script>
   
 
