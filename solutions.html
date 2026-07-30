@@ -88,17 +88,17 @@
           <!-- Sol 3 Link: UGV -->
           <a href="#solution-ugv" class="card solution-card-nav reveal-on-scroll stagger-3">
             <h3>UGV</h3>
-            <p data-i18n="solutions.solutions-overview.p_text_2">전투 차량 및 무인지상 차량 인지</p>
+            <p>비정형 험지에서도 지속되는 무인지상차량 인지</p>
           </a>
           <!-- Sol 4 Link: Waves -->
           <a href="#solution-wave" class="card solution-card-nav reveal-on-scroll stagger-4">
             <h3 data-i18n="solutions.solutions-overview.h3_title">Waves</h3>
-            <p data-i18n="solutions.solutions-overview.p_text_3">선박 안전용 실시간 파도 탐지 레이다</p>
+            <p>전방의 파도를 인식하는 실시간 수면 분석</p>
           </a>
           <!-- Sol 5 Link: AMR -->
           <a href="#solution-amr" class="card solution-card-nav reveal-on-scroll stagger-5">
             <h3>AMR</h3>
-            <p>물류 및 산업 현장용 자율 이동 로봇</p>
+            <p>산업 현장을 위한 자율이동로봇 인지와 위치 추정</p>
           </a>
         </div>
       </div>
@@ -223,25 +223,39 @@
       <div class="container">
         <div class="sol-header reveal-on-scroll">
           <span class="eyebrow">Solution 03</span>
-          <h2 data-i18n="solutions.solution-ugv.h2_title">UGV 무인지상차량 인지 솔루션</h2>
+          <h2>UGV</h2>
+          <p class="sol-subtitle" style="font-size: var(--fs-md); color: var(--accent-cyan); margin-top: var(--space-xs); font-weight: 600;">비정형 험지에서도 지속되는 무인지상차량 인지</p>
         </div>
         
         <div class="sol-main-img reveal-on-scroll stagger-1">
           <video src="assets/images/solutions/02_ugv/ugv_video.mp4" autoplay loop muted playsinline></video>
         </div>
 
+        <div class="sol-description reveal-on-scroll stagger-2" style="margin-bottom: var(--space-xl); color: var(--text-secondary); line-height: 1.7; max-width: 900px;">
+          DeepFusion AI의 UGV 인지 솔루션은 4D 이미징 레이다 기반 공간 인식과 객체 추적을 통해 비포장도로, 수풀, 진흙, 경사면 등 다양한 지상 환경에서 차량 주변 상황을 인식합니다. 탐지된 장애물과 지형 정보를 자율주행 및 경로 계획 시스템에 전달하여 무인지상차량이 복잡한 비정형 환경에서도 안정적으로 기동할 수 있도록 지원합니다.
+        </div>
+
+        <h3 class="reveal-on-scroll stagger-2" style="font-size: var(--fs-md); color: var(--text-primary); margin-bottom: var(--space-md);">✓ 주요 제공 기능</h3>
         <div class="grid grid-3 sol-features">
           <div class="card">
-            <h3 data-i18n="solutions.solution-ugv.h3_title">야지/험지 비정형 인지</h3>
-            <p data-i18n="solutions.solution-ugv.p_text">도로 선이 없는 야지, 수풀, 진흙 등 험난한 오프로드 환경에서도 가속 구동 및 장애물 유형을 검출합니다.</p>
+            <h3>험지 및 비정형 장애물 탐지</h3>
+            <p>도로 선이 없는 야지, 수풀, 진흙 등 험난한 오프로드 환경에서도 가속 구동 및 장애물 유형을 검출합니다.</p>
           </div>
           <div class="card">
-            <h3 data-i18n="solutions.solution-ugv.h3_title_2">은폐 타겟 식별</h3>
-            <p data-i18n="solutions.solution-ugv.p_text_2">수풀 뒤에 은폐된 철제 장비나 인원을 4D 레이다 전파 투과 특성으로 관측합니다.</p>
+            <h3>이동 객체 위치 & 상태 추적</h3>
+            <p>움직이는 장비나 인원의 정확한 좌표 및 속도, 이동 모션을 추적합니다.</p>
           </div>
           <div class="card">
-            <h3 data-i18n="solutions.solution-ugv.h3_title_3">실시간 3D 험지도 맵핑</h3>
-            <p data-i18n="solutions.solution-ugv.p_text_3">차량 전방의 험지 굴곡과 단차를 3D 그리드로 복원하여 자율 경로 계획 장치에 전송합니다.</p>
+            <h3>경사면·단차 지형 변화 인식</h3>
+            <p>경로 주행 상의 굴곡과 단차, 경사도를 실시간 정밀 인식하여 차량의 주행 한계를 판단합니다.</p>
+          </div>
+          <div class="card">
+            <h3>먼지·저조도 환경 완벽 대응</h3>
+            <p>수풀 뒤 은폐물이나 야간, 황사/먼지 속에서도 4D 레이다 전파 투과 특성으로 관측을 유지합니다.</p>
+          </div>
+          <div class="card">
+            <h3>3D 공간 정보 & 경로 연동</h3>
+            <p>차량 전방 상황을 3D 포인트 클라우드로 복원하여 자율 경로 제어 시스템에 완벽하게 전송합니다.</p>
           </div>
         </div>
 
@@ -266,25 +280,39 @@
       <div class="container">
         <div class="sol-header reveal-on-scroll">
           <span class="eyebrow">Solution 04</span>
-          <h2 data-i18n="solutions.solution-wave.h2_title">Wave Detection 실시간 파고 탐지 솔루션</h2>
+          <h2>Waves</h2>
+          <p class="sol-subtitle" style="font-size: var(--fs-md); color: var(--accent-cyan); margin-top: var(--space-xs); font-weight: 600;">전방의 파도를 인식하는 실시간 수면 분석</p>
         </div>
         
         <div class="sol-main-img reveal-on-scroll stagger-1">
           <video src="assets/images/solutions/03_wave/wave_video.mp4" autoplay loop muted playsinline></video>
         </div>
 
+        <div class="sol-description reveal-on-scroll stagger-2" style="margin-bottom: var(--space-xl); color: var(--text-secondary); line-height: 1.7; max-width: 900px;">
+          DeepFusion AI의 Waves 솔루션은 레이다로 수집한 수면 반사 데이터를 AI로 분석하여 파도 형상과 움직임을 감지합니다. 분석된 파도 정보를 자율운항 또는 운항 보조 시스템에 제공하여 감속, 항로 조정, 자세 제어 등 더욱 안전한 운항 판단을 지원합니다.
+        </div>
+
+        <h3 class="reveal-on-scroll stagger-2" style="font-size: var(--fs-md); color: var(--text-primary); margin-bottom: var(--space-md);">✓ 주요 제공 기능</h3>
         <div class="grid grid-3 sol-features">
           <div class="card">
-            <h3 data-i18n="solutions.solution-wave.h3_title">실시간 파랑 데이터 분석</h3>
-            <p data-i18n="solutions.solution-wave.p_text">선박 전방 100m 이내의 개별 파도 높이(파고)와 다가오는 속도를 초당 10회 이상 계측합니다.</p>
+            <h3>선박 전방 수면 및 파도 탐지</h3>
+            <p>선박 전방 100m 이내의 수면 상태와 다가오는 파도를 조기에 식별합니다.</p>
           </div>
           <div class="card">
-            <h3 data-i18n="solutions.solution-wave.h3_title_2">최적 자율 운항 연동</h3>
-            <p data-i18n="solutions.solution-wave.p_text_2">파도 계측 정보를 기반으로 감속, 회피 조타 명령을 자율 운항 컴퓨터에 즉시 연동합니다.</p>
+            <h3>파고 및 파향 실시간 분석</h3>
+            <p>개별 파도의 높이(파고)와 다가오는 속도, 방향을 실시간 계측하여 분석합니다.</p>
           </div>
           <div class="card">
-            <h3 data-i18n="solutions.solution-wave.h3_title_3">고신뢰성 해상 모니터링</h3>
-            <p data-i18n="solutions.solution-wave.p_text_3">폭풍우, 야간 해 fog 조건에서도 물리 센서 한계를 극복하고 계측 정밀도 90% 이상을 유지합니다.</p>
+            <h3>강우·야간 전천후 계측</h3>
+            <p>기상이 악화된 폭풍우 상황이나 야간 해무 속에서도 90% 이상의 고신뢰성 정밀도를 유지합니다.</p>
+          </div>
+          <div class="card">
+            <h3>위험도 평가 데이터 제공</h3>
+            <p>선박 안정성을 위협하는 특이 파고를 감지하여 자율 조타 및 감속 지침의 판단 데이터를 전송합니다.</p>
+          </div>
+          <div class="card">
+            <h3>제어 시스템 연동</h3>
+            <p>자율운항 컴퓨터 및 선박 모션 제어 시스템과 인터페이스로 즉각 연계됩니다.</p>
           </div>
         </div>
 
@@ -309,25 +337,39 @@
       <div class="container">
         <div class="sol-header reveal-on-scroll">
           <span class="eyebrow">Solution 05</span>
-          <h2>AMR 물류/산업용 자율주행 로봇 인지 솔루션</h2>
+          <h2>AMR</h2>
+          <p class="sol-subtitle" style="font-size: var(--fs-md); color: var(--accent-cyan); margin-top: var(--space-xs); font-weight: 600;">산업 현장을 위한 자율이동로봇 인지와 위치 추정</p>
         </div>
         
         <div class="sol-main-img reveal-on-scroll stagger-1">
           <video src="assets/images/solutions/05_amr/amr_video.mp4" autoplay loop muted playsinline></video>
         </div>
 
+        <div class="sol-description reveal-on-scroll stagger-2" style="margin-bottom: var(--space-xl); color: var(--text-secondary); line-height: 1.7; max-width: 900px;">
+          DeepFusion AI의 AMR 솔루션은 4D 이미징 레이다 기반 객체 인지와 위치 추정 기술을 통해 실내외 산업 현장에서 로봇 주변의 동적 객체와 고정 구조물을 인식합니다. 인지 결과를 로봇의 지도 작성, 위치 추정, 경로 계획 및 충돌 방지 시스템과 연동하여 자율이동로봇이 복잡한 산업 환경에서도 안정적으로 운용될 수 있도록 지원합니다.
+        </div>
+
+        <h3 class="reveal-on-scroll stagger-2" style="font-size: var(--fs-md); color: var(--text-primary); margin-bottom: var(--space-md);">✓ 주요 제공 기능</h3>
         <div class="grid grid-3 sol-features">
           <div class="card">
-            <h3>4D 레이다 실내외 3D SLAM</h3>
-            <p>조명 변동 및 먼지·연기가 가득한 산업 현장에서도 광학 센서의 한계를 극복하고 4D 레이다 기반의 고정밀 3D 지도 작성과 자위치를 정밀 추정합니다.</p>
+            <h3>작업자·지게차·이동 장비 탐지</h3>
+            <p>공장 및 물류창고 내 움직이는 작업자, 지게차, 장애물을 사각지대 없이 감지합니다.</p>
           </div>
           <div class="card">
-            <h3>동적 사물 360° 실시간 실증 탐지</h3>
-            <p>물류창고 및 공장 내 무작위로 이동하는 작업자, 지게차, 장애물을 사각지대 없이 360° 고속 사물 감지 및 동적 궤적 추적으로 사전에 충돌을 방지합니다.</p>
+            <h3>동적 객체 이동 경로 추적</h3>
+            <p>이동하는 동적 장애물의 향후 예상 궤적을 360° 고속 트래킹하여 사전에 충돌을 방지합니다.</p>
           </div>
           <div class="card">
-            <h3>초저전력 엣지 AI 융합 모듈</h3>
-            <p>소형 AMR 배터리 환경에 최적화된 저전력 On-Device AI 컴퓨팅 모듈로 실시간 라벨링 및 초저지연 제어 명령을 원스톱으로 지원합니다.</p>
+            <h3>실내외 레이다 위치 추정 (SLAM)</h3>
+            <p>광학 센서 오작동 환경에서도 레이다 특성을 바탕으로 자위치를 안정적으로 정밀 추정합니다.</p>
+          </div>
+          <div class="card">
+            <h3>주변 지도의 실시간 작성 & 갱신</h3>
+            <p>수시로 물품 적재 상태가 바뀌는 물류 환경에서 3D 험지도를 실시간 작성하고 갱신합니다.</p>
+          </div>
+          <div class="card">
+            <h3>한계 극복 & 제어 시스템 연동</h3>
+            <p>현장의 먼지, 연기, 조도 급변을 완벽 극복하고 AMR 안전 제어 및 경로 플래너에 원스톱 전달합니다.</p>
           </div>
         </div>
       </div>

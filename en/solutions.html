@@ -88,17 +88,17 @@
           <!-- Sol 3 Link: UGV -->
           <a href="#solution-ugv" class="card solution-card-nav reveal-on-scroll stagger-3">
             <h3>UGV</h3>
-            <p data-i18n="solutions.solutions-overview.p_text_2">Combat Vehicle and Unmanned Ground Vehicle Perception</p>
+            <p>Robust UGV perception in unstructured rough terrains</p>
           </a>
           <!-- Sol 4 Link: Waves -->
           <a href="#solution-wave" class="card solution-card-nav reveal-on-scroll stagger-4">
             <h3 data-i18n="solutions.solutions-overview.h3_title">Waves</h3>
-            <p data-i18n="solutions.solutions-overview.p_text_3">Real-Time Wave Detection Radar for Vessel Safety</p>
+            <p>Real-time surface analysis for forward wave perception</p>
           </a>
           <!-- Sol 5 Link: AMR -->
           <a href="#solution-amr" class="card solution-card-nav reveal-on-scroll stagger-5">
             <h3>AMR</h3>
-            <p>Autonomous Mobile Robot Perception for Logistics & Industry</p>
+            <p>Autonomous mobile robot perception & localization for industrial sites</p>
           </a>
         </div>
       </div>
@@ -223,25 +223,39 @@
       <div class="container">
         <div class="sol-header reveal-on-scroll">
           <span class="eyebrow">Solution 03</span>
-          <h2 data-i18n="solutions.solution-ugv.h2_title">UGV Unmanned Ground Vehicle Perception Solution</h2>
+          <h2>UGV</h2>
+          <p class="sol-subtitle" style="font-size: var(--fs-md); color: var(--accent-cyan); margin-top: var(--space-xs); font-weight: 600;">Robust Unmanned Ground Vehicle Perception in Unstructured Rough Terrains</p>
         </div>
         
         <div class="sol-main-img reveal-on-scroll stagger-1">
           <video src="../assets/images/solutions/02_ugv/ugv_video.mp4" autoplay loop muted playsinline></video>
         </div>
 
+        <div class="sol-description reveal-on-scroll stagger-2" style="margin-bottom: var(--space-xl); color: var(--text-secondary); line-height: 1.7; max-width: 900px;">
+          DeepFusion AI's UGV perception solution recognizes the surrounding situation of the vehicle in various land environments such as unpaved roads, bushes, mud, and slopes through 4D imaging radar-based spatial recognition and object tracking. By delivering detected obstacles and terrain information to the autonomous driving and path planning systems, it supports unmanned ground vehicles to maneuver stably even in complex unstructured environments.
+        </div>
+
+        <h3 class="reveal-on-scroll stagger-2" style="font-size: var(--fs-md); color: var(--text-primary); margin-bottom: var(--space-md);">✓ Key Features</h3>
         <div class="grid grid-3 sol-features">
           <div class="card">
-            <h3 data-i18n="solutions.solution-ugv.h3_title">Off-Road/Rough Terrain Perception</h3>
-            <p data-i18n="solutions.solution-ugv.p_text">Detects obstacles and drivable paths even in off-road, bush, and muddy environments without lane markings.</p>
+            <h3>Rough Terrain & Unstructured Obstacle Detection</h3>
+            <p>Detects obstacles and drivable paths even in off-road, bush, and muddy environments without lane markings.</p>
           </div>
           <div class="card">
-            <h3 data-i18n="solutions.solution-ugv.h3_title_2">Concealed Target Identification</h3>
-            <p data-i18n="solutions.solution-ugv.p_text_2">Observes metal equipment or personnel concealed behind bushes using 4D radar wave penetration characteristics.</p>
+            <h3>Moving Object Position & Status Tracking</h3>
+            <p>Tracks precise target position, velocity, and moving status of dynamic targets.</p>
           </div>
           <div class="card">
-            <h3 data-i18n="solutions.solution-ugv.h3_title_3">Real-Time 3D Rough Terrain Mapping</h3>
-            <p data-i18n="solutions.solution-ugv.p_text_3">Restores the roughness and steps of the terrain ahead as a 3D grid and transmits it to the path planner.</p>
+            <h3>Slope & Step Recognition</h3>
+            <p>Recognizes slopes, steps, and terrain roughness in real-time to assess vehicle operation limits.</p>
+          </div>
+          <div class="card">
+            <h3>Dust & Low-Light Performance</h3>
+            <p>Maintains clear detection behind bushes, in dense dust/sandstorms, and in complete darkness using 4D radar signal penetration.</p>
+          </div>
+          <div class="card">
+            <h3>3D Space Map & Path Planning Integration</h3>
+            <p>Generates 3D grid spatial maps ahead of the vehicle to feed into autonomous steering and navigation planners.</p>
           </div>
         </div>
 
@@ -266,25 +280,39 @@
       <div class="container">
         <div class="sol-header reveal-on-scroll">
           <span class="eyebrow">Solution 04</span>
-          <h2 data-i18n="solutions.solution-wave.h2_title">Wave Detection Real-Time Wave Height Solution</h2>
+          <h2>Waves</h2>
+          <p class="sol-subtitle" style="font-size: var(--fs-md); color: var(--accent-cyan); margin-top: var(--space-xs); font-weight: 600;">Real-Time Surface Analysis for Forward Wave Perception</p>
         </div>
         
         <div class="sol-main-img reveal-on-scroll stagger-1">
           <video src="../assets/images/solutions/03_wave/wave_video.mp4" autoplay loop muted playsinline></video>
         </div>
 
+        <div class="sol-description reveal-on-scroll stagger-2" style="margin-bottom: var(--space-xl); color: var(--text-secondary); line-height: 1.7; max-width: 900px;">
+          DeepFusion AI's Waves solution analyzes water surface reflection data collected by radar using AI to detect wave shapes and movements. By providing analyzed wave information to autonomous navigation or pilot assistance systems, it supports safer navigation decisions such as deceleration, route adjustment, and attitude control.
+        </div>
+
+        <h3 class="reveal-on-scroll stagger-2" style="font-size: var(--fs-md); color: var(--text-primary); margin-bottom: var(--space-md);">✓ Key Features</h3>
         <div class="grid grid-3 sol-features">
           <div class="card">
-            <h3 data-i18n="solutions.solution-wave.h3_title">Real-Time Wave Data Analysis</h3>
-            <p data-i18n="solutions.solution-wave.p_text">Measures the height (wave height) and speed of individual waves within 100m ahead of the vessel 10+ times per second.</p>
+            <h3>Forward Surface & Wave Detection</h3>
+            <p>Identifies water surface state and approaching waves early within 100m in front of the vessel.</p>
           </div>
           <div class="card">
-            <h3 data-i18n="solutions.solution-wave.h3_title_2">Optimal Autonomous Navigation Integration</h3>
-            <p data-i18n="solutions.solution-wave.p_text_2">Integrates wave measurement data directly to the autonomous computer for deceleration and avoidance commands.</p>
+            <h3>Wave Height & Direction Analysis</h3>
+            <p>Analyzes wave height, velocity, and incoming direction in real-time, outputting calculations 10+ times per second.</p>
           </div>
           <div class="card">
-            <h3 data-i18n="solutions.solution-wave.h3_title_3">High-Reliability Marine Monitoring</h3>
-            <p data-i18n="solutions.solution-wave.p_text_3">Overcomes physical sensor limits to maintain 90%+ measurement precision even in rainstorms and night sea fog.</p>
+            <h3>All-Weather Operations</h3>
+            <p>Guarantees 90%+ measurement accuracy under heavy rain, typhoons, and thick night fog.</p>
+          </div>
+          <div class="card">
+            <h3>Risk Assessment Data Provision</h3>
+            <p>Provides critical danger indexes regarding exceptional waves to trigger auto-steering or speed reductions.</p>
+          </div>
+          <div class="card">
+            <h3>Control System Integration</h3>
+            <p>Fully integrates with autonomous marine computers and vessel motion stabilizers.</p>
           </div>
         </div>
 
@@ -309,25 +337,39 @@
       <div class="container">
         <div class="sol-header reveal-on-scroll">
           <span class="eyebrow">Solution 05</span>
-          <h2>AMR Industrial & Logistics Autonomous Robot Perception Solution</h2>
+          <h2>AMR</h2>
+          <p class="sol-subtitle" style="font-size: var(--fs-md); color: var(--accent-cyan); margin-top: var(--space-xs); font-weight: 600;">Autonomous Mobile Robot Perception & Localization for Industrial Sites</p>
         </div>
         
         <div class="sol-main-img reveal-on-scroll stagger-1">
           <video src="../assets/images/solutions/05_amr/amr_video.mp4" autoplay loop muted playsinline></video>
         </div>
 
+        <div class="sol-description reveal-on-scroll stagger-2" style="margin-bottom: var(--space-xl); color: var(--text-secondary); line-height: 1.7; max-width: 900px;">
+          DeepFusion AI's AMR solution recognizes dynamic objects and fixed structures around robots in indoor and outdoor industrial environments through 4D imaging radar-based object perception and localization technology. By integrating perception results with the robot's mapping, localization, path planning, and collision prevention systems, it supports autonomous mobile robots to operate stably in complex industrial environments.
+        </div>
+
+        <h3 class="reveal-on-scroll stagger-2" style="font-size: var(--fs-md); color: var(--text-primary); margin-bottom: var(--space-md);">✓ Key Features</h3>
         <div class="grid grid-3 sol-features">
           <div class="card">
-            <h3>4D Radar Indoor & Outdoor 3D SLAM</h3>
-            <p>Overcomes optical sensor limitations in harsh environments with lighting fluctuations, dust, and smoke to build high-precision 3D maps and localize in real-time.</p>
+            <h3>Worker, Forklift & Equipment Detection</h3>
+            <p>Detects moving operators, forklifts, and equipment around warehouses and assembly lines without blind spots.</p>
           </div>
           <div class="card">
-            <h3>360° Dynamic Object Detection</h3>
-            <p>Prevents collisions by detecting moving workers, forklifts, and obstacles around warehouses and industrial sites in 360° with real-time trajectory tracking.</p>
+            <h3>Dynamic Object Path Tracking</h3>
+            <p>Traces moving obstacles and projects their trajectory 360° to preemptively prevent collisions.</p>
           </div>
           <div class="card">
-            <h3>Ultra-Low Power Edge AI Module</h3>
-            <p>Optimized for compact AMR battery systems, delivering low-power on-device AI computing for ultra-low latency control and perception.</p>
+            <h3>Radar-Based SLAM</h3>
+            <p>Maintains precise localization using radar signal traits even where lidar or optical cameras fail.</p>
+          </div>
+          <div class="card">
+            <h3>Real-Time Mapping & Updates</h3>
+            <p>Dynamically constructs and updates 3D maps in warehouses where cargo layouts shift constantly.</p>
+          </div>
+          <div class="card">
+            <h3>Harsh Environment Mitigation</h3>
+            <p>Bypasses challenges from dense smoke, dust, and lighting fluctuations to feed data directly to path planning and safety logic.</p>
           </div>
         </div>
       </div>
