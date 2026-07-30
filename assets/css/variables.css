@@ -8,10 +8,10 @@
   --bg-footer:    #08183A;  /* Footer (darkest) */
 
   /* ===== Card Backgrounds (on dark) ===== */
-  --bg-card:           rgba(255, 255, 255, 0.04);
-  --bg-card-hover:     rgba(255, 255, 255, 0.07);
-  --bg-card-border:    rgba(6, 182, 212, 0.15);
-  --bg-card-border-hv: rgba(6, 182, 212, 0.45);
+  --bg-card:           transparent;
+  --bg-card-hover:     transparent;
+  --bg-card-border:    transparent;
+  --bg-card-border-hv: transparent;
 
   /* ===== Text (on dark) ===== */
   --text-primary:   #F0F9FF;
@@ -33,8 +33,8 @@
   );
 
   /* ===== Shadows ===== */
-  --shadow-card:       0 4px 20px rgba(0, 0, 0, 0.25);
-  --shadow-card-hover: 0 10px 40px rgba(6, 182, 212, 0.15);
+  --shadow-card:       none;
+  --shadow-card-hover: none;
   --shadow-glow:       0 0 24px rgba(6, 182, 212, 0.3);
   
   /* === Typography === */

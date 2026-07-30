@@ -144,23 +144,16 @@
   grid-template-columns: 1fr;
 }
 
-/* Card Styles */
 .card {
-  background: var(--bg-card);
-  border: 1px solid var(--bg-card-border);
+  background: transparent;
+  border: none;
   border-radius: 12px;
-  padding: 2rem;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  transition: transform 250ms ease-out, border-color 250ms ease-out, box-shadow 250ms ease-out, background 250ms ease-out;
-  box-shadow: var(--shadow-card);
+  padding: 2rem 0;
+  transition: transform 250ms ease-out;
 }
 
 .card:hover {
   transform: translateY(-4px);
-  background: var(--bg-card-hover);
-  border-color: var(--bg-card-border-hv);
-  box-shadow: var(--shadow-card-hover);
 }
 
 .card h3 {

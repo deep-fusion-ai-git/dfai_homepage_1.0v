@@ -9,14 +9,11 @@
 }
 
 .visual-placeholder {
-  background: var(--bg-card);
-  border: 1px solid var(--bg-card-border);
+  background: transparent;
+  border: none;
   border-radius: var(--radius-lg);
-  padding: var(--space-2xl);
+  padding: var(--space-2xl) 0;
   text-align: center;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: var(--shadow-card);
 }
 
 .visual-placeholder h4 {
